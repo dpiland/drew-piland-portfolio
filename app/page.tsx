@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/sections/Hero";
+import { LogoBar } from "@/components/sections/LogoBar";
 import { About } from "@/components/sections/About";
 import { WhatIDo } from "@/components/sections/WhatIDo";
 import { CaseStudies } from "@/components/sections/CaseStudies";
@@ -14,6 +15,7 @@ export default function Home() {
       <Navigation />
       <main>
         <Hero />
+        <LogoBar />
         <About />
         <WhatIDo />
         <CaseStudies />
