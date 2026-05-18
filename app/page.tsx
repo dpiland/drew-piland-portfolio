@@ -4,6 +4,7 @@ import { About } from "@/components/sections/About";
 import { WhatIDo } from "@/components/sections/WhatIDo";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CareerHighlights } from "@/components/sections/CareerHighlights";
+import { Talks } from "@/components/sections/Talks";
 import { HowIWork } from "@/components/sections/HowIWork";
 import { Contact } from "@/components/sections/Contact";
 
@@ -17,6 +18,7 @@ export default function Home() {
         <WhatIDo />
         <CaseStudies />
         <CareerHighlights />
+        <Talks />
         <HowIWork />
         <Contact />
       </main>
