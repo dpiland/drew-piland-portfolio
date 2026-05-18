@@ -11,7 +11,7 @@ function LogoItem({ logo }: { logo: Logo }) {
           src={`https://cdn.simpleicons.org/${logo.slug}/${ICON_COLOR}`}
           alt={logo.name}
           title={logo.name}
-          className="h-6 w-auto object-contain"
+          className={`${logo.tall ? "h-8" : "h-6"} w-auto object-contain`}
         />
       </div>
     );
