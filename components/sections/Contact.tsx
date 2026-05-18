@@ -25,22 +25,20 @@ export function Contact() {
               Worth Talking About.
             </h2>
             <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-              Open to Senior PMM, Lead PMM, and Director-level roles.
+              I&apos;m open to Senior Level Product Marketing and Alliance Marketing Manager positions.
               Let&apos;s see if there&apos;s a fit.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              {/* EDIT: Replace with your real email address */}
               <a
-                href="mailto:your@email.com"
+                href="mailto:jdpiland6@gmail.com"
                 className="inline-flex items-center gap-2 bg-blue-500 text-white font-medium px-6 py-3.5 rounded-full hover:bg-blue-400 transition-all duration-200 shadow-lg shadow-blue-500/20 hover:shadow-blue-500/30"
               >
                 <Mail className="w-4 h-4" />
                 Email Me
               </a>
-              {/* EDIT: Replace with your LinkedIn profile URL */}
               <a
-                href="https://linkedin.com/in/your-profile"
+                href="https://www.linkedin.com/in/drewpiland/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 border border-slate-700 text-slate-200 font-medium px-6 py-3.5 rounded-full hover:border-blue-500/50 hover:bg-blue-500/5 hover:text-white transition-all duration-200"
@@ -68,7 +66,7 @@ export function Contact() {
           <div className="flex items-center gap-6">
             {/* EDIT: Replace with your real URLs */}
             <a
-              href="https://linkedin.com/in/your-profile"
+              href="https://www.linkedin.com/in/drewpiland/"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-slate-400 transition-colors"
@@ -76,7 +74,7 @@ export function Contact() {
               LinkedIn
             </a>
             <a
-              href="mailto:your@email.com"
+              href="mailto:jdpiland6@gmail.com"
               className="hover:text-slate-400 transition-colors"
             >
               Email
