@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software GTM Playbook — Portfolio Sample</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy:       #0c1a35;
+      --navy-mid:   #1a2f55;
+      --blue:       #1d4ed8;
+      --blue-light: #3b82f6;
+      --teal:       #0891b2;
+      --green:      #16a34a;
+      --amber:      #d97706;
+      --slate:      #475569;
+      --slate-light:#94a3b8;
+      --border:     #e2e8f0;
+      --bg:         #f8fafc;
+      --white:      #ffffff;
+      --red:        #dc2626;
+      --red-light:  #fef2f2;
+      --tier1:      #dbeafe;
+      --tier2:      #dcfce7;
+      --tier3:      #fef3c7;
+    }
+
+    html { font-family: 'Inter', system-ui, sans-serif; background: #e8edf4; color: #1e293b; font-size: 15px; }
+
+    /* ── Portfolio notice banner ─────────────────────── */
+    .notice {
+      background: var(--navy);
+      color: #94a3b8;
+      text-align: center;
+      padding: 10px 24px;
+      font-size: 11.5px;
+      letter-spacing: 0.04em;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid #1e3a5f;
+    }
+    .notice strong { color: #60a5fa; }
+
+    /* ── Page wrapper ────────────────────────────────── */
+    .page { max-width: 1100px; margin: 0 auto; padding: 40px 24px 80px; display: flex; flex-direction: column; gap: 32px; }
+
+    /* ── Slide shell ─────────────────────────────────── */
+    .slide {
+      background: var(--white);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,.08);
+    }
+
+    /* ── Slide header strip ──────────────────────────── */
+    .slide-header {
+      background: var(--navy);
+      padding: 28px 36px 22px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .slide-header h1 { font-size: 30px; font-weight: 800; color: #fff; line-height: 1.1; }
+    .slide-header h2 { font-size: 22px; font-weight: 700; color: #fff; }
+    .slide-header .sub { font-size: 13px; color: #94a3b8; margin-top: 4px; }
+    .company-badge {
+      background: var(--blue);
+      color: #fff;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 4px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    /* ── Slide body ──────────────────────────────────── */
+    .slide-body { padding: 28px 36px 32px; }
+
+    /* ── Cover slide ─────────────────────────────────── */
+    .slide-cover .cover-inner {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3a6e 60%, #1d4ed8 100%);
+      padding: 64px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      min-height: 340px;
+      justify-content: center;
+    }
+    .cover-eyebrow {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #60a5fa;
+    }
+    .cover-title { font-size: 48px; font-weight: 900; color: #fff; line-height: 1.05; }
+    .cover-sub { font-size: 15px; color: #93c5fd; max-width: 520px; line-height: 1.6; }
+    .cover-date { font-size: 12px; color: #64748b; }
+    .cover-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: #e2e8f0;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 5px 12px;
+      border-radius: 20px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      width: fit-content;
+    }
+
+    /* ── Intro prose ─────────────────────────────────── */
+    .intro-text { font-size: 14px; color: var(--slate); line-height: 1.75; max-width: 700px; }
+    .intro-text + .intro-text { margin-top: 12px; }
+
+    /* ── Pillars grid ────────────────────────────────── */
+    .pillars-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+    .pillar {
+      padding: 20px 16px 22px;
+      border-right: 1px solid var(--border);
+    }
+    .pillar:last-child { border-right: none; }
+    .pillar-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      background: var(--navy-mid);
+      margin: -20px -16px 14px;
+      padding: 8px 16px;
+      letter-spacing: 0.04em;
+    }
+    .pillar-body { font-size: 12.5px; color: var(--slate); line-height: 1.6; }
+
+    /* ── Portfolio grid ──────────────────────────────── */
+    .portfolio-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+    .portfolio-col { border-right: 1px solid var(--border); padding-bottom: 16px; }
+    .portfolio-col:last-child { border-right: none; }
+    .portfolio-col-header {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--white);
+      background: var(--navy-mid);
+      padding: 9px 14px;
+      text-align: center;
+      margin-bottom: 12px;
+    }
+    .portfolio-col-header.security  { background: #b91c1c; }
+    .portfolio-col-header.productivity { background: #1d6b42; }
+    .portfolio-col-header.uem       { background: #1d4ed8; }
+    .portfolio-col-header.education { background: #15803d; }
+    .portfolio-col-header.branded   { background: var(--navy); }
+
+    .product-tag {
+      display: block;
+      margin: 0 12px 8px;
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #1e293b;
+      line-height: 1.35;
+    }
+    .product-tag span {
+      display: block;
+      font-size: 10px;
+      font-weight: 400;
+      color: var(--slate-light);
+      margin-top: 1px;
+    }
+
+    /* ── Tiering table ───────────────────────────────── */
+    .tier-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+    .tier-table th, .tier-table td { border: 1px solid var(--border); padding: 10px 11px; vertical-align: top; }
+    .tier-table thead th {
+      background: var(--navy);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .tier-table thead th:first-child { background: #0f172a; }
+    .tier-label {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: rotate(180deg);
+      white-space: nowrap;
+      text-align: center;
+      padding: 16px 8px;
+    }
+    .tier1-row td { background: #eff6ff; }
+    .tier1-row td:first-child { background: #1d4ed8; color: #fff; }
+    .tier2-row td { background: #f0fdf4; }
+    .tier2-row td:first-child { background: var(--green); color: #fff; }
+    .tier3-row td { background: #fffbeb; }
+    .tier3-row td:first-child { background: var(--amber); color: #fff; }
+    .tier-cat { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--blue); margin-bottom: 3px; }
+    .tier-cat.sec  { color: var(--red); }
+    .tier-cat.prod { color: var(--green); }
+    .tier-cat.uem  { color: var(--blue); }
+    .tier-cat.edu  { color: #15803d; }
+    .tier-cat.brand{ color: var(--navy-mid); }
+    .tier-items { list-style: none; }
+    .tier-items li { font-size: 11px; color: #334155; padding: 1.5px 0; line-height: 1.4; }
+    .tier-items li::before { content: "• "; color: var(--slate-light); }
+
+    /* ── Sales process ───────────────────────────────── */
+    .process-flow { display: flex; align-items: stretch; gap: 0; overflow-x: auto; }
+    .process-step {
+      flex: 1;
+      min-width: 130px;
+      background: var(--navy);
+      color: #fff;
+      padding: 18px 14px 16px;
+      position: relative;
+      text-align: center;
+      clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%, 18px 50%);
+      margin-left: -14px;
+    }
+    .process-step:first-child { clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 50%, calc(100% - 18px) 100%, 0 100%); margin-left: 0; }
+    .process-step:last-child  { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 18px 50%); }
+    .process-step:nth-child(even) { background: var(--navy-mid); }
+    .process-num  { font-size: 10px; font-weight: 700; opacity: 0.6; letter-spacing: 0.1em; text-transform: uppercase; }
+    .process-name { font-size: 11.5px; font-weight: 700; margin-top: 4px; line-height: 1.35; }
+    .process-criteria {
+      margin-top: 24px;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 8px;
+    }
+    .criteria-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 12px 10px;
+      font-size: 11px;
+      color: var(--slate);
+      line-height: 1.5;
+    }
+    .criteria-card strong { display: block; color: var(--navy); font-size: 10.5px; font-weight: 700; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 0.06em; }
+
+    /* ── Resource snapshot table ─────────────────────── */
+    .resource-table { width: 100%; border-collapse: collapse; font-size: 11.5px; }
+    .resource-table th { background: #1e293b; color: #fff; padding: 9px 12px; text-align: left; font-size: 10.5px; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; }
+    .resource-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .resource-table tr:nth-child(even) td { background: var(--bg); }
+    .resource-table tr:hover td { background: #eff6ff; }
+    .offering-name { font-weight: 700; color: var(--navy); font-size: 12px; }
+    .asset-pill {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 600;
+      padding: 2px 7px;
+      border-radius: 3px;
+      margin: 2px 2px 2px 0;
+      line-height: 1.6;
+    }
+    .pill-ext { background: #dbeafe; color: #1d4ed8; }
+    .pill-int { background: #f3f4f6; color: #4b5563; }
+
+    /* ── Conversation starters ───────────────────────── */
+    .conv-table { width: 100%; border-collapse: collapse; }
+    .conv-table th { background: #1e293b; color: #fff; padding: 10px 16px; text-align: left; font-size: 11px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+    .conv-table th:first-child { width: 100px; background: #0f172a; }
+    .conv-table td { padding: 14px 16px; border-bottom: 1px solid var(--border); vertical-align: top; font-size: 12.5px; color: #334155; line-height: 1.6; }
+    .conv-table td:first-child { font-weight: 800; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .stage-identify td:first-child { background: #1d4ed8; color: #fff; }
+    .stage-qualify  td:first-child { background: var(--navy-mid); color: #fff; }
+    .stage-schedule td:first-child { background: var(--green); color: #fff; }
+    .conv-list { list-style: none; }
+    .conv-list li { padding: 3px 0 3px 14px; position: relative; }
+    .conv-list li::before { content: "→"; position: absolute; left: 0; color: var(--slate-light); font-size: 11px; top: 4px; }
+    .listen-tag {
+      font-size: 10.5px;
+      font-weight: 600;
+      background: #f0fdf4;
+      border-left: 3px solid var(--green);
+      padding: 3px 8px;
+      margin: 4px 0;
+      color: #166534;
+      display: block;
+      border-radius: 0 4px 4px 0;
+    }
+
+    /* ── Section helpers ─────────────────────────────── */
+    .section-eyebrow {
+      font-size: 10.5px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--blue-light);
+      margin-bottom: 10px;
+    }
+    .section-lead { font-size: 13.5px; color: var(--slate); line-height: 1.65; margin-bottom: 20px; max-width: 740px; }
+    .divider { border: none; border-top: 1px solid var(--border); margin: 20px 0; }
+    .slide-num { font-size: 10px; font-weight: 600; color: #64748b; letter-spacing: 0.1em; text-transform: uppercase; }
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+    .label-chip {
+      display: inline-block;
+      font-size: 10px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 3px 8px;
+      border-radius: 3px;
+      margin-bottom: 8px;
+    }
+    .chip-blue   { background: #dbeafe; color: #1d4ed8; }
+    .chip-green  { background: #dcfce7; color: #15803d; }
+    .chip-orange { background: #ffedd5; color: #c2410c; }
+
+    /* ── Footer ──────────────────────────────────────── */
+    .slide-footer {
+      padding: 10px 36px;
+      background: var(--bg);
+      border-top: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .slide-footer .co { font-size: 11px; font-weight: 700; color: var(--navy); letter-spacing: 0.04em; }
+    .slide-footer .pg { font-size: 10px; color: var(--slate-light); }
+
+    /* ── Responsive ──────────────────────────────────── */
+    @media (max-width: 900px) {
+      .pillars-grid, .portfolio-grid { grid-template-columns: 1fr 1fr; }
+      .process-criteria { grid-template-columns: 1fr 1fr; }
+      .tier-table { font-size: 10px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .pillars-grid, .portfolio-grid { grid-template-columns: 1fr; }
+      .slide-body { padding: 20px 20px 24px; }
+      .slide-header { padding: 20px 20px 16px; }
+      .cover-title { font-size: 32px; }
+      .process-flow { flex-direction: column; }
+      .process-step { clip-path: none !important; margin-left: 0; border-radius: 4px; }
+    }
+
+    @media print {
+      .notice { position: static; }
+      .page { gap: 0; padding: 0; }
+      .slide { border-radius: 0; box-shadow: none; page-break-after: always; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Portfolio notice ────────────────────────────────────── -->
+<div class="notice">
+  <strong>PORTFOLIO SAMPLE</strong> — All company names, vendor partners, team members, internal metrics, and proprietary content have been anonymized or generalized. This document is illustrative only and intended for portfolio use.
+</div>
+
+<div class="page">
+
+  <!-- ══════════════════════════════════════════════════
+       SLIDE 1 · COVER
+  ═══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-cover">
+      <div class="cover-inner">
+        <div class="cover-eyebrow">GTM Enablement · Sales Playbook</div>
+        <div class="cover-title">Software GTM<br>Playbook</div>
+        <div class="cover-sub">
+          A go-to-market enablement system for a distributed sales organization managing 20+ software vendor partnerships across five product pillars and seven customer segments.
+        </div>
+        <div class="cover-tag">Portfolio Sample &nbsp;·&nbsp; Identifiable details removed</div>
+        <div class="cover-date" style="margin-top:8px;">Global Enterprise Technology Company &nbsp;·&nbsp; [Year]</div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="co">Global Enterprise Technology Company</span>
+      <span class="pg">1 of 7</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SLIDE 2 · OVERVIEW
+  ═══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="slide-num">Overview</div>
+        <h2>The Strategic Context</h2>
+        <div class="sub">Why this playbook was built and what problem it solves</div>
+      </div>
+      <div class="company-badge">Internal Enablement</div>
+    </div>
+    <div class="slide-body">
+      <div class="section-eyebrow">Background</div>
+      <p class="intro-text">
+        A global enterprise technology company with a dominant hardware franchise made a strategic decision to grow recurring software and services revenue — bringing on 20+ vendor partnerships across security, productivity, unified endpoint management, education, and branded solutions in under two years.
+      </p>
+      <p class="intro-text" style="margin-top:12px;">
+        The field sales organization had the customer relationships. What it lacked was a system: a clear prioritization of what to sell to whom, a common language for positioning, organized access to enablement resources, and a structured process for converting hardware conversations into software pipeline. This playbook was the answer.
+      </p>
+      <hr class="divider">
+      <div class="two-col" style="margin-top: 20px;">
+        <div>
+          <div class="label-chip chip-blue">The Problem</div>
+          <ul class="conv-list" style="margin-top: 8px;">
+            <li>No unified framework for navigating 20+ offerings</li>
+            <li>No segment-based prioritization — everything felt like Tier 1</li>
+            <li>Sales enablement assets scattered across multiple systems</li>
+            <li>No repeatable process from lead identification to specialist handoff</li>
+            <li>Inconsistent positioning across partner and internal teams</li>
+          </ul>
+        </div>
+        <div>
+          <div class="label-chip chip-green">The Solution</div>
+          <ul class="conv-list" style="margin-top: 8px;">
+            <li>5-pillar portfolio architecture with distinct value propositions</li>
+            <li>Priority tiering matrix by segment (T1/T2/T3 across 7 segments)</li>
+            <li>6-stage sales support process with clear exit criteria</li>
+            <li>Organized resource snapshots by pillar and offering type</li>
+            <li>Conversation frameworks mapped to buyer pain → product solution</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top: 18px; padding: 14px 16px; background: #f0f9ff; border-left: 3px solid var(--blue-light); border-radius: 0 6px 6px 0; font-size: 12.5px; color: #1e3a5f; line-height: 1.65;">
+        <strong>PMM role:</strong> Owned the GTM strategy, portfolio architecture, pillar value propositions, enablement infrastructure design, and launch of this playbook. Drove cross-functional alignment across 20+ vendor partner managers, sales leadership, and operations.
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="co">Global Enterprise Technology Company</span>
+      <span class="pg">2 of 7</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SLIDE 3 · VALUE PROPOSITION BY PILLAR
+  ═══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="slide-num">Portfolio Architecture</div>
+        <h2>Value Proposition by Pillar</h2>
+        <div class="sub">Five go-to-market pillars, each with a distinct customer problem and solution narrative</div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <p class="section-lead">
+        Committed to enabling customers to do their best work securely from anywhere. Through a single point of contact, customers access a comprehensive portfolio addressing the full spectrum of modern IT needs.
+      </p>
+      <div class="pillars-grid">
+
+        <div class="pillar">
+          <div class="pillar-title" style="background: #b91c1c;">🔒 Security</div>
+          <p class="pillar-body">
+            With proliferating devices and distributed work, the attack surface grows daily. Mitigating risk, tracking threats, and evaluating vendors is a daunting task for any IT organization.
+            <br><br>
+            We deliver secure endpoint solutions — secure-by-design hardware paired with industry-leading software partnerships — providing continuous protection against an evolving threat landscape.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-title" style="background: #1d6b42;">⚡ Productivity</div>
+          <p class="pillar-body">
+            Businesses require a collaboration suite that delivers a consistent experience from anywhere — with seamless integration and the flexibility to scale.
+            <br><br>
+            We enable customers to optimize for hybrid workforces with the latest productivity and collaboration capabilities: access files anywhere, co-author documents, connect through video, and more.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-title" style="background: #1d4ed8;">🖥 UEM</div>
+          <p class="pillar-body">
+            Unified Endpoint Management lets IT manage, secure, and deploy corporate resources across any device from a single console.
+            <br><br>
+            We drive a more cost-effective, secure, and cohesive solution by eliminating the need for multiple platforms to support online and offline device types.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-title" style="background: #15803d;">🎓 Education</div>
+          <p class="pillar-body">
+            Our mission: empower and inspire the future of learning. Together with industry partners, we've built an education software portfolio that keeps IT productive, educators inspired, and students engaged.
+            <br><br>
+            Built on 20 years of ed-tech leadership — easy to deploy, secure, manage, and designed for safe, accessible learning at scale.
+          </p>
+        </div>
+
+        <div class="pillar">
+          <div class="pillar-title" style="background: var(--navy);">🏷 Branded Solutions</div>
+          <p class="pillar-body">
+            Enterprises need to be agile — focused on innovation, not day-to-day operational overhead. Reducing effort and automating where possible is a core IT mandate.
+            <br><br>
+            We provide comprehensive proprietary solutions to help enterprises optimize, manage, and develop with scale — uniquely integrated with our hardware ecosystem.
+          </p>
+        </div>
+
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="co">Global Enterprise Technology Company</span>
+      <span class="pg">3 of 7</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SLIDE 4 · PRODUCT PORTFOLIO GRID
+  ═══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="slide-num">Portfolio Overview</div>
+        <h2>Software Portfolio at a Glance</h2>
+        <div class="sub">20+ offerings organized across five go-to-market pillars</div>
+      </div>
+    </div>
+    <div class="slide-body" style="padding-top: 20px;">
+      <div class="portfolio-grid">
+
+        <div class="portfolio-col">
+          <div class="portfolio-col-header security">Security</div>
+          <span class="product-tag">Comprehensive Security Platform <span>Endpoint protection suite</span></span>
+          <span class="product-tag">Endpoint Persistence &amp; Visibility <span>Out-of-band device control</span></span>
+          <span class="product-tag">Next-Gen EDR <span>AI-powered threat detection</span></span>
+          <span class="product-tag">Passwordless MFA <span>Zero-trust authentication</span></span>
+          <span class="product-tag">Automated Patch Management <span>Driver, BIOS &amp; 3rd-party patching</span></span>
+          <span class="product-tag">Asset Inventory Manager <span>Fleet visibility &amp; lifecycle</span></span>
+          <span class="product-tag">Enterprise Disk Encryption <span>Data security &amp; compliance</span></span>
+          <span class="product-tag">Browser &amp; Content Isolation <span>Zero-trust browsing</span></span>
+          <span class="product-tag">Endpoint Backup &amp; Recovery <span>Business continuity</span></span>
+        </div>
+
+        <div class="portfolio-col">
+          <div class="portfolio-col-header productivity">Productivity</div>
+          <span class="product-tag">Enterprise Productivity Suite <span>Direct &amp; indirect licensing</span></span>
+          <span class="product-tag">Cloud Collaboration Workspace <span>Docs, mail, meetings</span></span>
+          <span class="product-tag">Thin Client Management Software <span>VDI &amp; remote desktop</span></span>
+        </div>
+
+        <div class="portfolio-col">
+          <div class="portfolio-col-header uem">UEM</div>
+          <span class="product-tag">Integrated UEM Platform A <span>SCCM-integrated patching</span></span>
+          <span class="product-tag">Secure UEM Platform B <span>Non-SCCM environments</span></span>
+          <span class="product-tag">Mobile Device Management <span>Cross-platform MDM</span></span>
+        </div>
+
+        <div class="portfolio-col">
+          <div class="portfolio-col-header education">Education</div>
+          <span class="product-tag">Classroom Management Software <span>Live session control</span></span>
+          <span class="product-tag">Education Collaboration Suite <span>Cloud workspace for EDU</span></span>
+          <span class="product-tag">Content Filtering Platform <span>Network-level filtering</span></span>
+          <span class="product-tag">Education Network Management <span>K-12 network control</span></span>
+          <span class="product-tag">Immersive Learning Platform <span>VR/AR curriculum</span></span>
+          <span class="product-tag">Student Safety Monitoring <span>Digital wellness</span></span>
+          <span class="product-tag">Digital Curriculum Platform <span>Standards-aligned content</span></span>
+          <span class="product-tag">DNS Security &amp; Filtering <span>Web safety layer</span></span>
+        </div>
+
+        <div class="portfolio-col">
+          <div class="portfolio-col-header branded">Branded Solutions</div>
+          <span class="product-tag">Device Analytics Platform <span>Telemetry &amp; experience scoring</span></span>
+          <span class="product-tag">Mixed Reality Platform <span>Enterprise AR/VR</span></span>
+          <span class="product-tag">Device Management Console <span>Fleet management CLI</span></span>
+          <span class="product-tag">Deployment Automation Tool <span>Zero-touch provisioning</span></span>
+          <span class="product-tag">Performance Services Suite <span>AI-optimized performance</span></span>
+          <span class="product-tag">Smart Privacy Services <span>On-device privacy screen</span></span>
+        </div>
+
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="co">Global Enterprise Technology Company</span>
+      <span class="pg">4 of 7</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SLIDE 5 · PRIORITY TIERING MATRIX
+  ═══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="slide-num">GTM Strategy</div>
+        <h2>Priority Tiering by Customer Segment</h2>
+        <div class="sub">What to lead with, by segment — based on pipeline fit, rep capacity, and product-market match</div>
+      </div>
+    </div>
+    <div class="slide-body" style="padding-left: 24px; padding-right: 24px;">
+      <p class="section-lead" style="margin-bottom: 16px;">
+        With 20+ offerings competing for rep attention, prioritization was the single most important GTM decision. This matrix was grounded in real pipeline data and segment analysis — not vendor lobbying.
+      </p>
+      <table class="tier-table">
+        <thead>
+          <tr>
+            <th style="width:70px;">Tier</th>
+            <th>Corporate</th>
+            <th>SMB<br>Mid-Market</th>
+            <th>SMB<br>Channel</th>
+            <th>Education</th>
+            <th>SMB<br>Web</th>
+            <th>Consumer<br>Channel</th>
+            <th>Consumer<br>Web</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="tier1-row">
+            <td><div class="tier-label">Tier 1<br>Lead</div></td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Endpoint Persistence</li>
+                <li>Next-Gen EDR</li>
+                <li>Passwordless MFA</li>
+              </ul>
+              <div class="tier-cat uem" style="margin-top:6px;">UEM</div>
+              <ul class="tier-items">
+                <li>Automated Patch (SCCM)</li>
+                <li>Secure UEM (non-SCCM)</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Endpoint Persistence</li>
+                <li>Next-Gen EDR</li>
+              </ul>
+              <div class="tier-cat uem" style="margin-top:6px;">UEM</div>
+              <ul class="tier-items">
+                <li>Automated Patch (SCCM)</li>
+                <li>Secure UEM (non-SCCM)</li>
+              </ul>
+              <div class="tier-cat prod" style="margin-top:6px;">Productivity</div>
+              <ul class="tier-items">
+                <li>Enterprise Suite</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Bundled Endpoint<br>Protection (SMB)</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat edu">Instructional</div>
+              <ul class="tier-items">
+                <li>Classroom Mgmt.</li>
+                <li>Education Workspace</li>
+              </ul>
+              <div class="tier-cat sec" style="margin-top:6px;">Security &amp; Safety</div>
+              <ul class="tier-items">
+                <li>Endpoint Persistence</li>
+                <li>Next-Gen EDR</li>
+                <li>Content Filtering</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Endpoint Persistence</li>
+                <li>Next-Gen EDR</li>
+                <li>Disk Encryption</li>
+              </ul>
+              <div class="tier-cat brand" style="margin-top:6px;">Branded</div>
+              <ul class="tier-items">
+                <li>Performance Services</li>
+              </ul>
+              <div class="tier-cat prod" style="margin-top:6px;">Productivity</div>
+              <ul class="tier-items">
+                <li>Enterprise Suite</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Endpoint Persistence</li>
+                <li>Next-Gen EDR</li>
+              </ul>
+              <div class="tier-cat prod" style="margin-top:6px;">Productivity</div>
+              <ul class="tier-items">
+                <li>Enterprise Suite</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat brand">Branded</div>
+              <ul class="tier-items">
+                <li>Performance Services</li>
+              </ul>
+              <div class="tier-cat prod" style="margin-top:6px;">Productivity</div>
+              <ul class="tier-items">
+                <li>Enterprise Suite</li>
+              </ul>
+            </td>
+          </tr>
+          <tr class="tier2-row">
+            <td><div class="tier-label">Tier 2<br>Sub</div></td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Asset Manager</li>
+                <li>Disk Encryption</li>
+              </ul>
+              <div class="tier-cat brand" style="margin-top:6px;">Branded</div>
+              <ul class="tier-items">
+                <li>Device Analytics</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Disk Encryption</li>
+                <li>Browser Isolation</li>
+              </ul>
+              <div class="tier-cat brand" style="margin-top:6px;">Branded</div>
+              <ul class="tier-items">
+                <li>Device Analytics</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat brand">Branded</div>
+              <ul class="tier-items">
+                <li>Performance Services<br><em style="font-size:10px;color:#94a3b8;">(req. Consumer app)</em></li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat edu">Instructional</div>
+              <ul class="tier-items">
+                <li>Creativity Apps</li>
+                <li>Immersive Learning</li>
+              </ul>
+              <div class="tier-cat sec" style="margin-top:6px;">Security &amp; Safety</div>
+              <ul class="tier-items">
+                <li>Network Mgmt.</li>
+                <li>Cloud Workspace</li>
+              </ul>
+            </td>
+            <td style="color: var(--slate-light); font-style: italic; font-size: 11px;">—</td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Disk Encryption</li>
+                <li>Automated Patch</li>
+              </ul>
+            </td>
+            <td style="color: var(--slate-light); font-style: italic; font-size: 11px;">—</td>
+          </tr>
+          <tr class="tier3-row">
+            <td><div class="tier-label">Tier 3</div></td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Endpoint Backup</li>
+                <li>Browser Isolation</li>
+              </ul>
+              <div class="tier-cat brand" style="margin-top:6px;">Branded</div>
+              <ul class="tier-items">
+                <li>Mixed Reality Platform</li>
+              </ul>
+            </td>
+            <td>
+              <div class="tier-cat sec">Security</div>
+              <ul class="tier-items">
+                <li>Endpoint Backup</li>
+              </ul>
+            </td>
+            <td style="color: var(--slate-light); font-style: italic; font-size: 11px;">—</td>
+            <td style="color: var(--slate-light); font-style: italic; font-size: 11px;">—</td>
+            <td style="color: var(--slate-light); font-style: italic; font-size: 11px;">—</td>
+            <td style="color: var(--slate-light); font-style: italic; font-size: 11px;">—</td>
+            <td style="color: var(--slate-light); font-style: italic; font-size: 11px;">—</td>
+          </tr>
+        </tbody>
+      </table>
+      <div style="margin-top:14px; font-size:11px; color: var(--slate-light); display: flex; gap: 16px; flex-wrap: wrap;">
+        <span style="display:flex; align-items:center; gap: 5px;"><span style="width:12px;height:12px;background:#eff6ff;border:1px solid #bfdbfe;display:inline-block;border-radius:2px;"></span> Tier 1 — Lead with these</span>
+        <span style="display:flex; align-items:center; gap: 5px;"><span style="width:12px;height:12px;background:#f0fdf4;border:1px solid #bbf7d0;display:inline-block;border-radius:2px;"></span> Tier 2 — Follow-on or natural attach</span>
+        <span style="display:flex; align-items:center; gap: 5px;"><span style="width:12px;height:12px;background:#fffbeb;border:1px solid #fde68a;display:inline-block;border-radius:2px;"></span> Tier 3 — Opportunistic only</span>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="co">Global Enterprise Technology Company</span>
+      <span class="pg">5 of 7</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SLIDE 6 · SALES SUPPORT PROCESS
+  ═══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="slide-num">Sales Motion</div>
+        <h2>Software Sales Support Process</h2>
+        <div class="sub">Six-stage repeatable motion from lead identification to post-sale success</div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <div class="process-flow">
+        <div class="process-step">
+          <div class="process-num">Stage 1</div>
+          <div class="process-name">Rep Identifies Opportunity</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">Stage 2</div>
+          <div class="process-name">Software Specialist Engaged</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">Stage 3</div>
+          <div class="process-name">Joint Qualification &amp; Quoting</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">Stage 4</div>
+          <div class="process-name">Opportunity Won</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">Stage 5</div>
+          <div class="process-name">Partner Success Onboarding</div>
+        </div>
+        <div class="process-step">
+          <div class="process-num">Stage 6</div>
+          <div class="process-name">Post-Sale Support</div>
+        </div>
+      </div>
+
+      <div class="process-criteria">
+        <div class="criteria-card">
+          <strong>Exit Criteria 1</strong>
+          Qualifying conversation completed. Lead routed to software specialist using segment-based routing logic.
+        </div>
+        <div class="criteria-card">
+          <strong>Exit Criteria 2</strong>
+          Software specialist joins call. Opportunity jointly scoped. Partner manager aligned on vendor solution.
+        </div>
+        <div class="criteria-card">
+          <strong>Exit Criteria 3</strong>
+          Quote built through central system. Deal registration completed with vendor partner.
+        </div>
+        <div class="criteria-card">
+          <strong>Exit Criteria 4</strong>
+          Opportunity closed-won. Onboarding call coordinated with vendor partner success team.
+        </div>
+        <div class="criteria-card">
+          <strong>Exit Criteria 5</strong>
+          Vendor partner manages deployment, license fulfillment, and customer journey.
+        </div>
+        <div class="criteria-card">
+          <strong>Exit Criteria 6</strong>
+          Vendor-specific support docs distributed. Account team maintains relationship context.
+        </div>
+      </div>
+
+      <div style="margin-top: 20px; background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px;">
+        <div style="font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate); margin-bottom: 8px;">Routing Logic</div>
+        <div class="two-col" style="gap: 16px;">
+          <div style="font-size: 12px; color: var(--slate);">
+            <strong style="color: var(--navy);">Relationship-led accounts:</strong> Initial lead sent to account owner, who engages the software specialist overlay team.
+          </div>
+          <div style="font-size: 12px; color: var(--slate);">
+            <strong style="color: var(--navy);">Unassigned accounts:</strong> Lead routed to segment Services CAM, who engages the appropriate specialist resource.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="co">Global Enterprise Technology Company</span>
+      <span class="pg">6 of 7</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       SLIDE 7 · CONVERSATION STARTERS
+  ═══════════════════════════════════════════════════ -->
+  <div class="slide">
+    <div class="slide-header">
+      <div>
+        <div class="slide-num">Sales Enablement · Security Pillar</div>
+        <h2>Conversation Starters: Security</h2>
+        <div class="sub">Identify. Qualify. Schedule. — A guided discovery framework for field reps</div>
+      </div>
+    </div>
+    <div class="slide-body">
+      <p class="section-lead">
+        Field reps don't need product expertise to open a software conversation. They need the right questions. This framework maps discovery questions to pain signals, and pain signals to product solutions — so every rep can qualify fast and hand off confidently.
+      </p>
+      <table class="conv-table">
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Questions to Ask</th>
+            <th>Listen For…</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="stage-identify">
+            <td>Identify</td>
+            <td>
+              <ul class="conv-list">
+                <li>What is your primary security goal for the next 12 months — and how would a breach impact that?</li>
+                <li>How have your security policies adapted to distributed and hybrid work arrangements?</li>
+                <li>How are you currently ensuring your endpoints are protected from anywhere?</li>
+                <li>Are you able to track, assess, and manage your full device fleet in real time?</li>
+                <li>Are users managing their own passwords? Do you have MFA deployed across the org?</li>
+              </ul>
+            </td>
+            <td>
+              <span class="listen-tag">Lack of endpoint visibility / inability to remote wipe → Endpoint Persistence Platform</span>
+              <span class="listen-tag">No fleet-wide purchase or lifecycle data → Asset Inventory Manager</span>
+              <span class="listen-tag">Too much time patching drivers / 3rd-party apps → Automated Patch Management</span>
+              <span class="listen-tag">Exposure to ransomware / zero-day threats → Next-Gen EDR</span>
+              <span class="listen-tag">Password sprawl / high help-desk MFA costs → Passwordless MFA</span>
+            </td>
+          </tr>
+          <tr class="stage-qualify">
+            <td>Qualify</td>
+            <td>
+              <ul class="conv-list">
+                <li>How are you managing firmware, driver, and third-party software updates today — and how long does it typically take?</li>
+                <li>Are there compliance frameworks you're working toward — NIST, HIPAA, PCI-DSS, FedRAMP?</li>
+                <li>If a ransomware event happened today, what's your rollback and recovery plan?</li>
+                <li>How many endpoints are you managing, and are they all on the same management stack?</li>
+              </ul>
+            </td>
+            <td>
+              <span class="listen-tag">SCCM-managed environment → Integrated UEM / Automated Patch Management</span>
+              <span class="listen-tag">Regulatory compliance requirements (GDPR, HIPAA, FedRAMP) → Disk Encryption Platform</span>
+              <span class="listen-tag">No rollback capability → Next-Gen EDR (one-click recovery)</span>
+              <span class="listen-tag">Mixed or unmanaged device estate → Endpoint Persistence Platform</span>
+            </td>
+          </tr>
+          <tr class="stage-schedule">
+            <td>Schedule</td>
+            <td>
+              <ul class="conv-list">
+                <li>"Our security portfolio is modular — we can design a solution specific to your exposure and compliance requirements."</li>
+                <li>"I'd like to bring in one of our security specialists to go deeper. When would work for you? Is there anyone else from your IT or security team we should include?"</li>
+              </ul>
+            </td>
+            <td>
+              <span class="listen-tag">→ Engage Security Solutions Specialist overlay team</span>
+              <span class="listen-tag">→ Route through account owner for named accounts; through segment CAM for unassigned</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 20px; padding: 14px 16px; background: #fffbeb; border-left: 3px solid var(--amber); border-radius: 0 6px 6px 0; font-size: 12px; color: #92400e; line-height: 1.65;">
+        <strong>Field reminder:</strong> Reps don't need to close software — they need to open the conversation and hand off cleanly. The goal of this framework is a qualified meeting booked with a specialist, not product expertise. Book the meeting.
+      </div>
+    </div>
+    <div class="slide-footer">
+      <span class="co">Global Enterprise Technology Company</span>
+      <span class="pg">7 of 7</span>
+    </div>
+  </div>
+
+
+  <!-- ══════════════════════════════════════════════════
+       END NOTE
+  ═══════════════════════════════════════════════════ -->
+  <div style="text-align: center; padding: 16px; font-size: 11.5px; color: #94a3b8; line-height: 1.7;">
+    This document is a portfolio sample produced for recruiting purposes.<br>
+    All company identifiers, vendor names, team member names, internal metrics, and proprietary content have been anonymized.<br>
+    <strong style="color: #64748b;">Original work produced by Drew Piland.</strong>
+  </div>
+
+</div><!-- /page -->
+</body>
+</html>
