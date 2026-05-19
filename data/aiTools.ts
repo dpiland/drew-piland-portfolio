@@ -16,7 +16,7 @@ export const aiTools: AITool[] = [
   {
     name: "ChatGPT",
     icon: Bot,
-    description: "First drafts, brainstorming, and custom GPTs for consistent voice.",
+    description: "First drafts, brainstorming, and custom GPTs for consistency.",
   },
   {
     name: "Claude Code",
@@ -31,7 +31,7 @@ export const aiTools: AITool[] = [
   {
     name: "Whispr Flow",
     icon: Wand2,
-    description: "Voice-to-text across every surface, all day.",
+    description: "Voice-to-text in ready to send format.",
   },
   {
     name: "Gamma",
