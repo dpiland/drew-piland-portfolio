@@ -11,12 +11,12 @@ export const aiTools: AITool[] = [
   {
     name: "Perplexity",
     icon: Search,
-    description: "Market research and competitive intel in real time.",
+    description: "Market research and competitive intel with receipts.",
   },
   {
     name: "ChatGPT",
     icon: Bot,
-    description: "First-draft briefs, brainstorming, message testing.",
+    description: "First drafts, brainstorming, and custom GPTs for consistent voice.",
   },
   {
     name: "Claude Code",
