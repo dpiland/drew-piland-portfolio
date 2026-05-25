@@ -1,4 +1,4 @@
-import { ExternalLink, Play, Video } from "lucide-react";
+import { BookOpen, ExternalLink, FileText, Play, Video } from "lucide-react";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 import { talks } from "@/data/talks";
 
@@ -6,6 +6,8 @@ const typeColors: Record<string, string> = {
   "Conference Talk": "bg-blue-500/15 text-blue-400",
   "Ignite Talk":     "bg-violet-500/15 text-violet-400",
   "Platform Demo":   "bg-cyan-500/15 text-cyan-400",
+  "Blog Post":       "bg-emerald-500/15 text-emerald-400",
+  "eBook":           "bg-amber-500/15 text-amber-400",
 };
 
 export function Talks() {
@@ -59,6 +61,34 @@ export function Talks() {
                     {talk.year}
                   </div>
                 </div>
+              ) : talk.platform === "blog" ? (
+                /* Blog card */
+                <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-emerald-900/60 to-slate-900 flex items-center justify-center">
+                  <FileText className="w-16 h-16 text-emerald-400/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className="inline-flex items-center gap-1 bg-slate-950/70 backdrop-blur-sm text-slate-200 text-xs font-semibold px-2.5 py-1 rounded-full">
+                      {talk.event}
+                    </span>
+                  </div>
+                  <div className="absolute top-3 right-3 text-xs text-slate-300 bg-slate-950/70 px-2 py-0.5 rounded-full">
+                    {talk.year}
+                  </div>
+                </div>
+              ) : talk.platform === "ebook" ? (
+                /* eBook card */
+                <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-amber-900/50 to-slate-900 flex items-center justify-center">
+                  <BookOpen className="w-16 h-16 text-amber-400/20" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className="inline-flex items-center gap-1 bg-slate-950/70 backdrop-blur-sm text-slate-200 text-xs font-semibold px-2.5 py-1 rounded-full">
+                      {talk.event}
+                    </span>
+                  </div>
+                  <div className="absolute top-3 right-3 text-xs text-slate-300 bg-slate-950/70 px-2 py-0.5 rounded-full">
+                    {talk.year}
+                  </div>
+                </div>
               ) : (
                 /* LinkedIn card — branded placeholder */
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-[#0a66c2] to-[#004182] flex items-center justify-center">
@@ -89,7 +119,7 @@ export function Talks() {
                   {talk.description}
                 </p>
                 <span className="inline-flex items-center gap-1.5 text-sm font-medium text-blue-400 group-hover:text-blue-300 transition-colors mt-1">
-                  {talk.platform === "youtube" ? "Watch Recording" : "View Post"}
+                  {talk.platform === "youtube" ? "Watch Recording" : talk.platform === "blog" ? "Read Post" : talk.platform === "ebook" ? "Download eBook" : "View Post"}
                   <ExternalLink className="w-3.5 h-3.5" />
                 </span>
               </div>

@@ -72,4 +72,34 @@ export const caseStudies: CaseStudy[] = [
       "[Placeholder: Partner adoption rate / pipeline contribution / scale metric / time-to-first-campaign reduction]",
     tags: ["Channel Marketing", "Partner Enablement", "Playbook", "Scale"],
   },
+  {
+    id: "unify-ai",
+    title: "AI Platform GTM — Unify AI",
+    company: "CloudBees",
+    category: "AI Product Launch",
+    challenge:
+      "Launching three AI products (AI Assistant, First Responder, Unify AI) into a DevOps market skeptical of AI hype — buyers had seen vague AI claims before and tuned them out.",
+    insight:
+      "Buyers didn't need an AI story. They needed proof that the product solved a pain they already felt — incident chaos, slow triage, and alert fatigue. Lead with the problem, let the AI be the mechanism.",
+    action:
+      "Developed product-specific messaging for each AI capability grounded in operational outcomes. Built agentic AI demo environments using Claude Code to give field teams something to show, not just tell.",
+    impact:
+      "Enabled sales motion for Unify AI suite; positioned First Responder as an integrated alternative to standalone incident management tools, expanding platform value for enterprise buyers.",
+    tags: ["AI Product Marketing", "GTM", "Launch", "DevOps"],
+  },
+  {
+    id: "microsoft-csp",
+    title: "Cloud Services GTM — Microsoft CSP",
+    company: "Lenovo",
+    category: "Revenue Growth",
+    challenge:
+      "Microsoft cloud services were buried in a 30-vendor software portfolio with no clear sales motion. Reps didn't know when to lead with cloud or how to frame it against buyer priorities.",
+    insight:
+      "The win pattern was already in the data. Specific account profiles, deal stages, and triggers predicted CSP upsell. The problem wasn't motivation — it was prioritization and messaging fit.",
+    action:
+      "Built win intelligence and automated lead scoring to surface the right accounts. Created messaging that framed Microsoft cloud as margin expansion, not a product add-on. Unlocked MDF investment to fund the outreach motion.",
+    impact:
+      "+272% YoY revenue growth on Microsoft cloud services.",
+    tags: ["GTM", "Cloud", "Revenue Growth", "Sales Enablement"],
+  },
 ];

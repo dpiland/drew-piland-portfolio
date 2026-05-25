@@ -2,9 +2,9 @@ import { SectionLabel } from "@/components/ui/SectionLabel";
 
 // EDIT: Update these with your real numbers
 const stats = [
-  { value: "[X]+", label: "Product Launches" },
-  { value: "[X]", label: "Years in B2B Tech" },
-  { value: "[X]+", label: "Sales Reps Enabled" },
+  { value: "30+", label: "Product Launches" },
+  { value: "9", label: "Years in B2B Tech" },
+  { value: "500+", label: "Sales Reps Enabled" },
   { value: "F500", label: "Partner Brands" },
 ];
 
@@ -38,11 +38,12 @@ export function About() {
               </p>
               {/* EDIT: Update [sport/activity] with your hobby */}
               <p>
-                Outside of work, I coach [sport] and think about product
-                problems the same way: what does winning look like, and
-                what&apos;s getting in the way? That coaching mindset —
-                direct feedback, clear objectives, building on strengths —
-                shapes how I work with every team.
+                Outside of work, I&apos;m usually on the golf course —
+                where the feedback is immediate and humbling. Golf has a
+                way of sharpening how you think about strategy: you can&apos;t
+                control every variable, so you focus on the decision in
+                front of you and play to your strengths. That mindset
+                carries into how I work.
               </p>
             </div>
           </div>

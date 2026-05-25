@@ -37,9 +37,9 @@ export function Hero() {
         {/* EDIT: Update [X] with your years of experience and customize the narrative */}
         <p className="max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 animate-fade-up delay-200">
           Senior PMM at the intersection of product, sales, and market
-          strategy. I&apos;ve spent [X] years translating what engineering
-          builds into language that moves buyers — and before that, I learned
-          how to coach people under pressure. That foundation never left.
+          strategy. I&apos;ve spent 9 years translating what engineering
+          builds into language that moves buyers — across DevOps, cloud
+          infrastructure, and enterprise software.
         </p>
 
         {/* CTAs */}
