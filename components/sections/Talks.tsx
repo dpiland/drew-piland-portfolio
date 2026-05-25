@@ -61,8 +61,27 @@ export function Talks() {
                     {talk.year}
                   </div>
                 </div>
+              ) : (talk.platform === "blog" || talk.platform === "ebook") && talk.thumbnail ? (
+                /* Blog / eBook card with real thumbnail */
+                <div className="relative aspect-video overflow-hidden bg-slate-800">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={talk.thumbnail}
+                    alt={talk.title}
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
+                  <div className="absolute top-3 left-3">
+                    <span className="inline-flex items-center gap-1 bg-slate-950/80 backdrop-blur-sm text-slate-200 text-xs font-semibold px-2.5 py-1 rounded-full">
+                      {talk.event}
+                    </span>
+                  </div>
+                  <div className="absolute top-3 right-3 text-xs text-slate-300 bg-slate-950/70 px-2 py-0.5 rounded-full">
+                    {talk.year}
+                  </div>
+                </div>
               ) : talk.platform === "blog" ? (
-                /* Blog card */
+                /* Blog card — fallback gradient */
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-emerald-900/60 to-slate-900 flex items-center justify-center">
                   <FileText className="w-16 h-16 text-emerald-400/20" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
@@ -76,7 +95,7 @@ export function Talks() {
                   </div>
                 </div>
               ) : talk.platform === "ebook" ? (
-                /* eBook card */
+                /* eBook card — fallback gradient */
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-amber-900/50 to-slate-900 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-amber-400/20" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />

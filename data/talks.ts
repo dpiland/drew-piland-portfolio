@@ -9,6 +9,7 @@ export interface Talk {
   platform: "youtube" | "linkedin" | "blog" | "ebook";
   // YouTube only — derived from video ID: https://img.youtube.com/vi/{videoId}/hqdefault.jpg
   videoId?: string;
+  thumbnail?: string;
 }
 
 // EDIT: Update titles, descriptions, and years as needed
@@ -58,6 +59,7 @@ export const talks: Talk[] = [
       "Explored how agentic AI and the Model Context Protocol (MCP) are reshaping DevOps workflows — from automated pipeline management to intelligent release decisions. Written to position CloudBees at the frontier of AI-native DevOps.",
     url: "https://www.cloudbees.com/blog/agentic-ai-devops-cloudbees-mcp-use-cases",
     platform: "blog",
+    thumbnail: "/agentic-ai-blog-thumb.jpg",
   },
   {
     id: "release-gap-ebook",
@@ -69,6 +71,7 @@ export const talks: Talk[] = [
       "Original research and narrative establishing the \"release gap\" concept — the critical distance between continuous delivery and production confidence. A flagship asset for CloudBees pipeline intelligence positioning.",
     url: "/release-gap-ebook.pdf",
     platform: "ebook",
+    thumbnail: "/release-gap-thumb.jpg",
   },
   {
     id: "cloud-native-perspective",
@@ -80,5 +83,6 @@ export const talks: Talk[] = [
       "A strategic guide for enterprise teams navigating the shift to cloud native — covering containers, microservices, and the organizational realities that determine whether the transition succeeds.",
     url: "/cloud-native-perspective.pdf",
     platform: "ebook",
+    thumbnail: "/cloud-native-thumb.jpg",
   },
 ];
