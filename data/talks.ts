@@ -40,7 +40,7 @@ export const talks: Talk[] = [
   {
     id: "claude-code-demo",
     event: "LinkedIn",
-    year: "2024",
+    year: "2026",
     type: "Platform Demo",
     title: "Claude Code: Live Platform Demo",
     description:
@@ -62,7 +62,7 @@ export const talks: Talk[] = [
   {
     id: "release-gap-ebook",
     event: "CloudBees",
-    year: "2024",
+    year: "2026",
     type: "eBook",
     title: "The Release Gap: Why CI/CD Isn't Enough",
     description:
