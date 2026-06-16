@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
 // EDIT: Update these with your real numbers
@@ -48,17 +49,28 @@ export function About() {
             </div>
           </div>
 
-          {/* Right: stat grid */}
-          <div className="grid grid-cols-2 gap-4">
-            {stats.map(({ value, label }) => (
-              <div
-                key={label}
-                className="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col items-start"
-              >
-                <span className="text-4xl font-bold text-white mb-1.5">{value}</span>
-                <span className="text-sm text-slate-500">{label}</span>
-              </div>
-            ))}
+          {/* Right: photo + stat grid */}
+          <div className="flex flex-col gap-6">
+            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
+              <Image
+                src="/headshot.png"
+                alt="Drew Piland"
+                fill
+                className="object-cover object-top"
+                priority
+              />
+            </div>
+            <div className="grid grid-cols-2 gap-4">
+              {stats.map(({ value, label }) => (
+                <div
+                  key={label}
+                  className="rounded-2xl border border-slate-800 bg-slate-900/60 p-8 flex flex-col items-start"
+                >
+                  <span className="text-4xl font-bold text-white mb-1.5">{value}</span>
+                  <span className="text-sm text-slate-500">{label}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
