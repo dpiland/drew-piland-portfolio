@@ -20,11 +20,11 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "Fragmented product narrative left sales struggling to differentiate in a crowded DevOps market. Deals stalled at the value conversation.",
     insight:
-      "Buyers didn't care about features — they cared about pipeline risk and deployment confidence. The product solved a real enterprise pain point, but the story wasn't connecting.",
+      "Buyers didn't care about features. They cared about pipeline risk and deployment confidence. The product solved a real enterprise pain point, but the story wasn't connecting.",
     action:
       "Rebuilt positioning around release intelligence. Developed a new core messaging framework and led narrative alignment across product, sales, and exec teams.",
     impact:
-      "[Placeholder: XX% increase in qualified pipeline / analyst recognition / launch KPI]",
+      "Grew the product line to $45M in year one (a 26% ARR shift) by reframing the story from Jenkins connector to enterprise release control plane.",
     tags: ["Positioning", "Launch", "DevOps", "B2B SaaS"],
   },
   {
@@ -35,11 +35,11 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "Company was under-positioned in key analyst reports despite having a strong product. Narrative gaps were costing deals at the enterprise validation stage.",
     insight:
-      "Analysts evaluate narrative as much as product capability. Internal teams weren't telling a coherent, differentiated story — every function had its own version of the truth.",
+      "Analysts evaluate narrative as much as product capability. Internal teams weren't telling a coherent, differentiated story; every function had its own version of the truth.",
     action:
       "Led analyst relations strategy, reframed differentiation narrative, and coordinated cross-functional input for submissions and briefings.",
     impact:
-      "[Placeholder: Improved ranking / Gartner MQ inclusion / Forrester Wave positioning / analyst quote secured]",
+      "Secured inclusion in both reports. The unified narrative laid the foundation for what became CloudBees Unify, a single platform story replacing a patchwork of disconnected products.",
     tags: ["Analyst Relations", "Gartner", "Forrester", "Positioning"],
   },
   {
@@ -50,11 +50,11 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "Joint solution had real technical value but lacked a market-facing story that either partner's sales team could articulate on their own.",
     insight:
-      "Enterprise buyers needed to see the integrated value proposition — not two separate product pitches stapled together.",
+      "Enterprise buyers needed to see the integrated value proposition, not two separate product pitches stapled together.",
     action:
       "Developed joint positioning, co-branded messaging architecture, and a launch playbook. Aligned stakeholders across two large, complex organizations.",
     impact:
-      "[Placeholder: Partner pipeline generated / joint wins / sales adoption rate / revenue attribution]",
+      "Closed $125M ARR in the final quarter, exceeding the prior year's total ARR. First-ever co-created solution for enterprise application access through the channel.",
     tags: ["Partner Marketing", "GTM", "Enterprise", "Co-sell"],
   },
   {
@@ -65,22 +65,22 @@ export const caseStudies: CaseStudy[] = [
     challenge:
       "A distributed partner ecosystem lacked consistent, scalable marketing resources. Partners wanted to go to market but didn't have the scaffolding to do it confidently.",
     insight:
-      "The bottleneck wasn't partner motivation — it was the absence of a repeatable framework partners could adapt and deploy without heavy support.",
+      "The bottleneck wasn't partner motivation; it was the absence of a repeatable framework partners could adapt and deploy without heavy support.",
     action:
       "Built a repeatable partner marketing playbook: messaging templates, campaign briefs, and co-sell enablement assets designed for self-service use.",
     impact:
-      "[Placeholder: Partner adoption rate / pipeline contribution / scale metric / time-to-first-campaign reduction]",
+      "Created the first centralized asset library telling the full Lenovo SSG software portfolio story, giving partners a single, consistent foundation to go to market with.",
     tags: ["Channel Marketing", "Partner Enablement", "Playbook", "Scale"],
   },
   {
     id: "unify-ai",
-    title: "AI Platform GTM — Unify AI",
+    title: "AI Platform GTM: Unify AI",
     company: "CloudBees",
     category: "AI Product Launch",
     challenge:
-      "Launching three AI products (AI Assistant, First Responder, Unify AI) into a DevOps market skeptical of AI hype — buyers had seen vague AI claims before and tuned them out.",
+      "Launching three AI products (AI Assistant, First Responder, Unify AI) into a DevOps market skeptical of AI hype. Buyers had seen vague AI claims before and tuned them out.",
     insight:
-      "Buyers didn't need an AI story. They needed proof that the product solved a pain they already felt — incident chaos, slow triage, and alert fatigue. Lead with the problem, let the AI be the mechanism.",
+      "Buyers didn't need an AI story. They needed proof that the product solved a pain they already felt: incident chaos, slow triage, and alert fatigue. Lead with the problem, let the AI be the mechanism.",
     action:
       "Developed product-specific messaging for each AI capability grounded in operational outcomes. Built agentic AI demo environments using Claude Code to give field teams something to show, not just tell.",
     impact:
@@ -89,13 +89,13 @@ export const caseStudies: CaseStudy[] = [
   },
   {
     id: "microsoft-csp",
-    title: "Cloud Services GTM — Microsoft CSP",
+    title: "Cloud Services GTM: Microsoft CSP",
     company: "Lenovo",
     category: "Revenue Growth",
     challenge:
       "Microsoft cloud services were buried in a 30-vendor software portfolio with no clear sales motion. Reps didn't know when to lead with cloud or how to frame it against buyer priorities.",
     insight:
-      "The win pattern was already in the data. Specific account profiles, deal stages, and triggers predicted CSP upsell. The problem wasn't motivation — it was prioritization and messaging fit.",
+      "The win pattern was already in the data. Specific account profiles, deal stages, and triggers predicted CSP upsell. The problem wasn't motivation; it was prioritization and messaging fit.",
     action:
       "Built win intelligence and automated lead scoring to surface the right accounts. Created messaging that framed Microsoft cloud as margin expansion, not a product add-on. Unlocked MDF investment to fund the outreach motion.",
     impact:

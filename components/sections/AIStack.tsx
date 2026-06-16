@@ -11,7 +11,7 @@ export function AIStack() {
             How AI Multiplies My Output
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-            Not a trend I&apos;m watching — a workflow I&apos;m already running.
+            Not a trend I&apos;m watching. A workflow I&apos;m already running.
             These tools are live in my day-to-day.
           </p>
         </div>

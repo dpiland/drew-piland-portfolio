@@ -20,7 +20,7 @@ export function Talks() {
             Talks &amp; Thought Leadership
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-            On stage and on camera — translating complex topics for technical and business audiences.
+            On stage and on camera, translating complex topics for technical and business audiences.
           </p>
         </div>
 
@@ -81,7 +81,7 @@ export function Talks() {
                   </div>
                 </div>
               ) : talk.platform === "blog" ? (
-                /* Blog card — fallback gradient */
+                /* Blog card, fallback gradient */
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-emerald-900/60 to-slate-900 flex items-center justify-center">
                   <FileText className="w-16 h-16 text-emerald-400/20" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
@@ -95,7 +95,7 @@ export function Talks() {
                   </div>
                 </div>
               ) : talk.platform === "ebook" ? (
-                /* eBook card — fallback gradient */
+                /* eBook card, fallback gradient */
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-amber-900/50 to-slate-900 flex items-center justify-center">
                   <BookOpen className="w-16 h-16 text-amber-400/20" />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 to-transparent" />
@@ -109,7 +109,7 @@ export function Talks() {
                   </div>
                 </div>
               ) : (
-                /* LinkedIn card — branded placeholder */
+                /* LinkedIn card, branded placeholder */
                 <div className="relative aspect-video overflow-hidden bg-gradient-to-br from-[#0a66c2] to-[#004182] flex items-center justify-center">
                   <svg viewBox="0 0 40 40" className="w-16 h-16 opacity-20 fill-white">
                     <path d="M8.5 14h5v17h-5V14zm2.5-7.8c1.6 0 2.9 1.3 2.9 2.9S12.6 12 11 12s-2.9-1.3-2.9-2.9S9.4 6.2 11 6.2zM17 14h4.8v2.3h.1c.7-1.3 2.3-2.7 4.8-2.7 5.1 0 6 3.4 6 7.7V31h-5v-8.8c0-2.1 0-4.8-2.9-4.8-2.9 0-3.4 2.3-3.4 4.6V31H17V14z"/>
