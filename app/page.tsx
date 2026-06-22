@@ -18,12 +18,12 @@ export default function Home() {
         <Hero />
         <LogoBar />
         <About />
-        <WhatIDo />
         <CaseStudies />
         <CareerHighlights />
-        <Talks />
-        <HowIWork />
         <AIStack />
+        <Talks />
+        <WhatIDo />
+        <HowIWork />
         <Contact />
       </main>
     </>

@@ -38,13 +38,11 @@ export function About() {
                 tells the right story. That&apos;s where I come in.
               </p>
               <p>
-                Outside of work, my days are spent with my growing family that
-                includes 3 young kids. When I get out, I&apos;m usually on the
-                golf course, where the feedback is
-                immediate and humbling. Golf has a way of sharpening how you
-                think about strategy: you can&apos;t control every variable, so
-                you focus on the decision in front of you and play to your
-                strengths. That mindset carries into how I work.
+                Outside work, most of my time goes to my wife and three young
+                kids, with the occasional round of golf when I can sneak away.
+                It&apos;s a humbling teacher of the same thing the job demands:
+                you can&apos;t control every variable, so you focus on the next
+                decision and play to your strengths.
               </p>
             </div>
           </div>

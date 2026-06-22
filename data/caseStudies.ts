@@ -24,7 +24,7 @@ export const caseStudies: CaseStudy[] = [
     action:
       "Rebuilt positioning around release intelligence. Developed a new core messaging framework and led narrative alignment across product, sales, and exec teams.",
     impact:
-      "Grew the product line to $45M in year one (a 26% ARR shift) by reframing the story from Jenkins connector to enterprise release control plane.",
+      "Grew the product line to $45M in year one (26% ARR growth) by reframing the story from Jenkins connector to enterprise release control plane.",
     tags: ["Positioning", "Launch", "DevOps", "B2B SaaS"],
   },
   {
@@ -54,7 +54,7 @@ export const caseStudies: CaseStudy[] = [
     action:
       "Developed joint positioning, co-branded messaging architecture, and a launch playbook. Aligned stakeholders across two large, complex organizations.",
     impact:
-      "Closed $125M ARR in the final quarter, exceeding the prior year's total ARR. First-ever co-created solution for enterprise application access through the channel.",
+      "Closed $125M in new ARR in the final quarter, exceeding the prior year's total ARR. First-ever co-created solution for enterprise application access through the channel.",
     tags: ["Partner Marketing", "GTM", "Enterprise", "Co-sell"],
   },
   {
