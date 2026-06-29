@@ -13,7 +13,7 @@ const buckets = [
     example:
       "A Python CLI I wrote on the Claude API, with web search built in, that generates full competitive intel reports on demand. It loops on searches, synthesizes the findings, and hands back a structured report ready for sales or positioning.",
     judgment:
-      "Manual research can't keep pace with AI launches — by the time you finish a cycle, the landscape has already shifted. I still vet every report against recent analyst calls and win/loss data before it ships; the CLI handles velocity, I handle interpretation.",
+      "Manual research can't keep pace with AI launches — the landscape shifts mid-cycle. The CLI handles velocity; I vet every report against analyst calls and win/loss data before it ships.",
   },
   {
     tag: "Thought Partnership",
