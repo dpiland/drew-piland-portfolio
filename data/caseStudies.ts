@@ -93,7 +93,7 @@ export const caseStudies: CaseStudy[] = [
     company: "Lenovo",
     category: "Revenue Growth",
     challenge:
-      "Microsoft cloud services were buried in a 30-vendor software portfolio with no clear sales motion. Reps didn't know when to lead with cloud or how to frame it against buyer priorities.",
+      "Customers could buy M365 directly from Microsoft — and many did. The opportunity was shifting that motion to Lenovo, where cloud licenses became the entry point for layering on Managed Services and creating low-friction expansion.",
     insight:
       "The win pattern was already in the data. Specific account profiles, deal stages, and triggers predicted CSP upsell. The problem wasn't motivation; it was prioritization and messaging fit.",
     action:

@@ -13,7 +13,7 @@ const buckets = [
     example:
       "A Python CLI I wrote on the Claude API, with web search built in, that generates full competitive intel reports on demand. It loops on searches, synthesizes the findings, and hands back a structured report ready for sales or positioning.",
     judgment:
-      "It keeps competitive intel current at the pace the market moves, not whenever I last had time to refresh it by hand. I still vet every report against recent analyst calls and win/loss data before it ships; the CLI handles velocity, I handle interpretation.",
+      "Manual research can't keep pace with AI launches — by the time you finish a cycle, the landscape has already shifted. I still vet every report against recent analyst calls and win/loss data before it ships; the CLI handles velocity, I handle interpretation.",
   },
   {
     tag: "Thought Partnership",
@@ -33,7 +33,7 @@ const buckets = [
     iconColor: "text-emerald-400",
     iconBg: "bg-emerald-500/10 border-emerald-500/20",
     tagColor: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-    title: "Unblocked myself",
+    title: "Shipped what the process wouldn't",
     example:
       "Our demo environment was weak and I couldn't fix it through official channels. So I used Claude Code to build my own: four industry-specific demo apps on our feature management product, each tailored to the pipeline patterns I found analyzing deals by vertical. The SE team adopted it for their own cycles.",
     judgment:
@@ -51,7 +51,7 @@ export function AIStack() {
             How I Actually Use AI
           </h2>
           <p className="mt-4 text-slate-400 max-w-2xl mx-auto">
-            I organize my AI usage in three buckets: automation pipelines that run without me, thought partnership that scales across the team, and building my own tooling when the official path is too slow. Knowing which bucket a task belongs to matters more than knowing which tool to use.
+            Knowing which bucket a task belongs to matters more than knowing which tool to use.
           </p>
         </div>
 

@@ -4,38 +4,13 @@ import type { ElementType } from "react";
 export interface AITool {
   name: string;
   icon: ElementType;
-  description: string;
 }
 
 export const aiTools: AITool[] = [
-  {
-    name: "Perplexity",
-    icon: Search,
-    description: "Market research and competitive intel with receipts.",
-  },
-  {
-    name: "ChatGPT",
-    icon: Bot,
-    description: "First drafts, brainstorming, and custom GPTs for consistency.",
-  },
-  {
-    name: "Claude Code",
-    icon: Terminal,
-    description: "Automating repetitive content and workflow tasks.",
-  },
-  {
-    name: "Otter.AI",
-    icon: Mic,
-    description: "Meeting transcription and follow-up extraction.",
-  },
-  {
-    name: "Whispr Flow",
-    icon: Wand2,
-    description: "Voice-to-text in ready to send format.",
-  },
-  {
-    name: "Gamma",
-    icon: Presentation,
-    description: "Quick presentation design and decks from scratch.",
-  },
+  { name: "Perplexity", icon: Search },
+  { name: "ChatGPT", icon: Bot },
+  { name: "Claude Code", icon: Terminal },
+  { name: "Otter.AI", icon: Mic },
+  { name: "Whispr Flow", icon: Wand2 },
+  { name: "Gamma", icon: Presentation },
 ];
