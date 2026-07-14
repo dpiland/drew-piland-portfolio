@@ -5,6 +5,7 @@ import { About } from "@/components/sections/About";
 import { WhatIDo } from "@/components/sections/WhatIDo";
 import { CaseStudies } from "@/components/sections/CaseStudies";
 import { CareerHighlights } from "@/components/sections/CareerHighlights";
+import { Testimonials } from "@/components/sections/Testimonials";
 import { Talks } from "@/components/sections/Talks";
 import { HowIWork } from "@/components/sections/HowIWork";
 import { AIStack } from "@/components/sections/AIStack";
@@ -20,6 +21,7 @@ export default function Home() {
         <About />
         <CaseStudies />
         <CareerHighlights />
+        <Testimonials />
         <AIStack />
         <Talks />
         <WhatIDo />
