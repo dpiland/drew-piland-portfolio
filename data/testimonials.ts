@@ -12,6 +12,16 @@ export interface Testimonial {
 // Add new recommendations here — paste the quote, name, title, company, and relationship context from LinkedIn
 export const testimonials: Testimonial[] = [
   {
+    id: "anna-tannas",
+    quote:
+      "Drew is equal parts strategic thinker and expert doer. We worked closely together at CloudBees, where I worked on the brand side and he worked on the product marketing side. Drew was a go-to subject matter expert for the broader marketing team, and I personally loved pressure-testing messaging ideas with him because of how deeply he understood the technology, the market, and our audience. He was very effective at translating that depth of knowledge into clear, accessible language.\n\nAs one of the longer-tenured employees at CloudBees, Drew had seen the company and its product portfolio through many changes and pivots. Through it all, he remained adaptable, positive, collaborative, and focused on what would create the greatest impact for customers.\n\nBeyond his expertise, Drew is simply a kind, thoughtful colleague who is incredibly easy to work with. Any team would be lucky to have him.",
+    name: "Anna Tannas",
+    title: "Brand Strategist | Creative Operations Leader",
+    company: "Strategy, Systems, & Storytelling",
+    relationship: "Senior to Drew at CloudBees, didn't manage directly",
+    year: 2026,
+  },
+  {
     id: "bryan-elanko",
     quote:
       "Drew is what I call a proactive thinker, builder, and operator. He's incredibly easy to work with because he takes the initiative to address issues well before they become problems. Drew has a knack for connecting people across functions, building alignment, and delivering work that addresses the company's most pressing needs. Whether he's solving an immediate challenge or building a new capability from the ground up, he brings strong ownership and sound judgment. I highly recommend him!",

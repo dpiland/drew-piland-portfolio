@@ -36,9 +36,11 @@ export function Testimonials() {
                 &ldquo;
               </span>
 
-              <p className="text-slate-300 leading-relaxed text-[0.95rem] flex-1 -mt-3">
-                {t.quote}
-              </p>
+              <div className="text-slate-300 leading-relaxed text-[0.95rem] flex-1 -mt-3 space-y-3">
+                {t.quote.split("\n\n").map((para, i) => (
+                  <p key={i}>{para}</p>
+                ))}
+              </div>
 
               <div className="border-t border-slate-800 pt-5 flex items-start justify-between gap-4">
                 <div>
