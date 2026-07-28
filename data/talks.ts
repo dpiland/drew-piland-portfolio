@@ -39,6 +39,18 @@ export const talks: Talk[] = [
     videoId: "_e4JSR-bn40",
   },
   {
+    id: "release-gap-ebook",
+    event: "CloudBees",
+    year: "2026",
+    type: "eBook",
+    title: "The Release Gap: Why CI/CD Isn't Enough",
+    description:
+      "The \"release gap\" is my term for the distance between continuous delivery and production confidence, and the argument that more CI/CD never closes it. I developed the concept and the original research behind it, and it became the anchor for CloudBees pipeline intelligence positioning.",
+    url: "/release-gap-ebook.pdf",
+    platform: "ebook",
+    thumbnail: "/release-gap-thumb.jpg",
+  },
+  {
     id: "claude-code-demo",
     event: "LinkedIn",
     year: "2026",
@@ -60,18 +72,6 @@ export const talks: Talk[] = [
     url: "https://www.cloudbees.com/blog/agentic-ai-devops-cloudbees-mcp-use-cases",
     platform: "blog",
     thumbnail: "/agentic-ai-blog-thumb.jpg",
-  },
-  {
-    id: "release-gap-ebook",
-    event: "CloudBees",
-    year: "2026",
-    type: "eBook",
-    title: "The Release Gap: Why CI/CD Isn't Enough",
-    description:
-      "Original research and narrative establishing the \"release gap\" concept: the critical distance between continuous delivery and production confidence. A flagship asset for CloudBees pipeline intelligence positioning.",
-    url: "/release-gap-ebook.pdf",
-    platform: "ebook",
-    thumbnail: "/release-gap-thumb.jpg",
   },
   {
     id: "cloud-native-perspective",

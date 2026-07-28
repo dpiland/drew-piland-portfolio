@@ -12,7 +12,7 @@ export function WhatIDo() {
             What I Do
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto">
-            Four core disciplines. Every engagement draws on all of them.
+            Four disciplines. Most of the work pulls on all four at once.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">

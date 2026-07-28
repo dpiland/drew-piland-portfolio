@@ -18,15 +18,17 @@ export function Contact() {
 
           <div className="relative z-10">
             <SectionLabel>Let&apos;s Connect</SectionLabel>
-            {/* EDIT: Customize headline and availability message */}
             <h2 className="text-4xl sm:text-5xl font-semibold text-white mt-2 mb-4 leading-tight">
-              Let&apos;s Build Something
+              Tell me about the
               <br />
-              Worth Talking About.
+              positioning problem.
             </h2>
             <p className="text-slate-400 text-lg mb-10 max-w-xl mx-auto">
-              I&apos;m open to Senior Level Product Marketing and Alliance Marketing Manager positions.
-              Let&apos;s see if there&apos;s a fit.
+              I&apos;m targeting Principal and Director Product Marketing roles:
+              category-defining products, technical buyers, and a field that
+              needs more than a deck. If you&apos;re deciding what your product
+              should stand for, or why the story isn&apos;t landing in deals,
+              that&apos;s the conversation I want.
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

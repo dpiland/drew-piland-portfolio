@@ -1,14 +1,12 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/sections/Hero";
 import { LogoBar } from "@/components/sections/LogoBar";
+import { AIStack } from "@/components/sections/AIStack";
 import { About } from "@/components/sections/About";
 import { WhatIDo } from "@/components/sections/WhatIDo";
 import { CaseStudies } from "@/components/sections/CaseStudies";
-import { CareerHighlights } from "@/components/sections/CareerHighlights";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Talks } from "@/components/sections/Talks";
-import { HowIWork } from "@/components/sections/HowIWork";
-import { AIStack } from "@/components/sections/AIStack";
 import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
@@ -18,14 +16,13 @@ export default function Home() {
       <main>
         <Hero />
         <LogoBar />
+        {/* Differentiator sits high: this is the section that wins AI-native rooms */}
+        <AIStack />
         <About />
         <CaseStudies />
-        <CareerHighlights />
         <Testimonials />
-        <AIStack />
         <Talks />
         <WhatIDo />
-        <HowIWork />
         <Contact />
       </main>
     </>

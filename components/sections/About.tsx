@@ -1,12 +1,13 @@
 import Image from "next/image";
 import { SectionLabel } from "@/components/ui/SectionLabel";
 
-// EDIT: Update these with your real numbers
+// Outcomes, not volume. Scope facts (launches, reps, partner orgs) live in
+// the chip row under Case Studies so the same claims aren't made twice.
 const stats = [
-  { value: "20+", label: "Product Launches" },
-  { value: "9", label: "Years in B2B Tech" },
-  { value: "500+", label: "Sales Reps Enabled" },
-  { value: "F500", label: "Partner Brands" },
+  { value: "+26%", label: "ARR on a $45M product line" },
+  { value: "2.6x", label: "Avg deal size, $100K to $265K" },
+  { value: "+272%", label: "YoY partner cloud revenue" },
+  { value: "75%", label: "Rep adoption, AI knowledge base" },
 ];
 
 export function About() {
@@ -25,24 +26,22 @@ export function About() {
             {/* EDIT: Make this your own: voice, tenure, industries, personality */}
             <div className="space-y-4 text-slate-400 leading-relaxed">
               <p>
-                I&apos;m a Senior PMM who specializes in B2B tech, the kind
-                with long sales cycles, complex buyers, and products that are
-                genuinely hard to explain. My job is to make that easier:
-                cleaner positioning, sharper messaging, and narratives that give
-                sales teams something they actually want to use.
+                I work on B2B tech with long sales cycles, buying committees of
+                six or more, and products that are genuinely hard to explain.
+                My job is to make the explaining easier, and to hand sales a
+                story they&apos;ll use without being told to.
               </p>
               <p>
-                Over the years I&apos;ve worked across DevOps, CDN,
-                infrastructure, and enterprise software and services, categories
-                where the product advantage is real, but invisible until someone
-                tells the right story. That&apos;s where I come in.
+                I&apos;ve done this across DevOps, CDN, infrastructure, and
+                enterprise software and services. In all of them the product
+                advantage was real and invisible until somebody put it into
+                words a buyer recognized.
               </p>
               <p>
-                Outside work, most of my time goes to my wife and three young
-                kids, with the occasional round of golf when I can sneak away.
-                It&apos;s a humbling teacher of the same thing the job demands:
-                you can&apos;t control every variable, so you focus on the next
-                decision and play to your strengths.
+                Outside work it&apos;s my wife and three young kids, plus a round
+                of golf when I can sneak one in. Golf is mostly an exercise in
+                accepting that you cannot control every variable, which turns
+                out to be decent practice for this job.
               </p>
             </div>
           </div>
@@ -51,7 +50,7 @@ export function About() {
           <div className="flex flex-col gap-6">
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden">
               <Image
-                src="/headshot.png"
+                src="/headshot.jpg"
                 alt="Drew Piland"
                 fill
                 className="object-cover object-top"

@@ -19,27 +19,23 @@ export function Hero() {
         {/* Eyebrow */}
         <div className="inline-flex items-center gap-3 text-xs font-semibold tracking-[0.2em] uppercase text-blue-400 mb-8 animate-fade-up">
           <span className="w-8 h-px bg-blue-400/40" />
-          {/* EDIT: Update your title/role */}
-          Senior Product Marketing Manager
+          Principal &amp; Director Product Marketing
           <span className="w-8 h-px bg-blue-400/40" />
         </div>
 
-        {/* Headline */}
-        {/* EDIT: This is your main positioning statement */}
+        {/* Headline: short form of the candidate messaging house roof */}
         <h1 className="font-display text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold leading-[1.05] tracking-tight text-white mb-6 animate-fade-up delay-100">
-          I Turn Complex Products
+          I Build For The Rep,
           <br />
-          Into{" "}
-          <span className="gradient-text">Stories That Close.</span>
+          Not <span className="gradient-text">The Deck.</span>
         </h1>
 
-        {/* Sub-narrative */}
-        {/* EDIT: Update [X] with your years of experience and customize the narrative */}
+        {/* Sub-narrative: states the belief before the credentials */}
         <p className="max-w-2xl mx-auto text-lg sm:text-xl text-slate-400 leading-relaxed mb-10 animate-fade-up delay-200">
-          Senior PMM at the intersection of product, sales, and market
-          strategy. I&apos;ve spent 9 years translating what engineering
-          builds into language that moves buyers, across DevOps, cloud
-          infrastructure, and enterprise software.
+          Most positioning dies somewhere between the launch deck and the live
+          call. I&apos;ve spent 8+ years closing that gap: category narrative
+          the executives sign off on, and the enablement systems that get 500
+          reps carrying it. CI/CD, software delivery, security.
         </p>
 
         {/* CTAs */}

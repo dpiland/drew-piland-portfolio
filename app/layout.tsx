@@ -15,37 +15,42 @@ const playfair = Playfair_Display({
   display: "swap",
 });
 
-// EDIT: Update title, description, and keywords with your real info
+const TITLE = "Drew Piland | Principal & Director Product Marketing";
+const DESCRIPTION =
+  "B2B product marketer who turns technical complexity into revenue narrative, then builds the field systems that make the whole team execute it. CI/CD, software delivery, and security platforms.";
+
 export const metadata: Metadata = {
-  title: "Drew Piland | Senior Product Marketing Manager",
-  description:
-    "Senior Product Marketing Manager specializing in B2B tech positioning, launch strategy, sales enablement, and executive narratives that drive pipeline.",
+  metadataBase: new URL("https://drewpiland.com"),
+  title: TITLE,
+  description: DESCRIPTION,
   keywords: [
+    "Principal Product Marketing Manager",
+    "Director Product Marketing",
     "Product Marketing Manager",
     "Senior PMM",
-    "B2B Marketing",
     "Drew Piland",
-    "Product Marketing Lead",
-    "Director Product Marketing",
+    "B2B SaaS Marketing",
+    "DevOps Product Marketing",
     "GTM Strategy",
     "Sales Enablement",
-    "B2B SaaS Marketing",
-    "Product Launch",
+    "Category Positioning",
+    "AI Product Marketing",
   ],
   authors: [{ name: "Drew Piland" }],
+  alternates: {
+    canonical: "https://drewpiland.com",
+  },
   openGraph: {
-    title: "Drew Piland | Senior Product Marketing Manager",
-    description:
-      "Senior PMM specializing in B2B tech positioning and narratives that close deals.",
+    title: TITLE,
+    description: DESCRIPTION,
     type: "website",
-    // EDIT: Update with your real domain once deployed
     url: "https://drewpiland.com",
+    siteName: "Drew Piland",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Drew Piland | Senior Product Marketing Manager",
-    description:
-      "Senior PMM specializing in B2B tech positioning and narratives that close deals.",
+    title: TITLE,
+    description: DESCRIPTION,
   },
 };
 

@@ -13,7 +13,7 @@ const buckets = [
     example:
       "A Python CLI I wrote on the Claude API, with web search built in, that generates full competitive intel reports on demand. It loops on searches, synthesizes the findings, and hands back a structured report ready for sales or positioning.",
     judgment:
-      "Manual research can't keep pace with AI launches — the landscape shifts mid-cycle. The CLI handles velocity; I vet every report against analyst calls and win/loss data before it ships.",
+      "Manual research can't keep pace with AI launches; the landscape shifts mid-cycle. The CLI handles velocity, and I vet every report against analyst calls and win/loss data before it ships.",
   },
   {
     tag: "Thought Partnership",
@@ -25,7 +25,7 @@ const buckets = [
     example:
       "A custom GPT I built and maintained for our sales team, loaded with current messaging, competitive battlecards, and objection-handling, refreshed on a bi-weekly cadence. Reps asked competitive questions in plain language and got answers grounded in live positioning.",
     judgment:
-      "Team leverage was the design principle, and it landed: reps self-served about 80% of their positioning and competitive questions, instead of routing every answer through PMM.",
+      "I built it for leverage and that is what it returned: 75% rep adoption, with the field getting answers mid-deal instead of waiting on me.",
   },
   {
     tag: "Built to Ship",
@@ -43,7 +43,7 @@ const buckets = [
 
 export function AIStack() {
   return (
-    <section className="py-28 px-6">
+    <section id="ai" className="py-28 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <SectionLabel>Working With AI</SectionLabel>
@@ -90,7 +90,11 @@ export function AIStack() {
           <div>
             <p className="text-white font-semibold text-lg mb-2">The calls I keep human</p>
             <p className="text-slate-400 text-sm leading-relaxed">
-              Positioning decisions, what we&apos;re choosing to claim versus competitors, what an analyst told us off the record. AI doesn&apos;t touch those. That boundary isn&apos;t caution, it&apos;s quality control.
+              Positioning decisions, what we&apos;re choosing to claim versus
+              competitors, what an analyst told us off the record. AI
+              doesn&apos;t touch any of it. Not because I&apos;m nervous about
+              the tool, but because those are the judgment calls I&apos;m paid
+              to make.
             </p>
           </div>
         </div>
