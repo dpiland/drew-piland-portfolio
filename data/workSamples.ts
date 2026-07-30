@@ -25,6 +25,15 @@ export interface WorkSample {
 
 export const workSamples: WorkSample[] = [
   {
+    slug: "launch-bom",
+    file: "launch-bom.md",
+    title: "Launch BOM: CloudBees Unify",
+    framework: "Tier 1 launch bill of materials",
+    blurb:
+      "The plan as it should have been briefed on day one, with a RACI across nine functions. Its whole point is the correction: funnel instrumentation belonged on the critical path, not backfilled after a quarter of great impressions and no pipeline.",
+    readingTime: "8 min",
+  },
+  {
     slug: "positioning",
     file: "positioning.md",
     title: "Positioning: CloudBees Unify",

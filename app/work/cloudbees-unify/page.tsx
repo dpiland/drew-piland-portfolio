@@ -120,6 +120,11 @@ export default function CloudBeesUnifyCaseStudy() {
             vouch for it.
           </p>
 
+          <ResourceLink
+            slug="launch-bom"
+            label="The full Tier 1 bill of materials, with a RACI across nine functions"
+          />
+
           <div className="pt-4">
             <div className="text-xs font-semibold tracking-[0.15em] uppercase text-slate-600 mb-4">
               What I owned
@@ -320,6 +325,27 @@ export default function CloudBeesUnifyCaseStudy() {
             not a moment. Nearly all of the learning is in the first 90 days
             after the announcement.
           </p>
+
+          <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-6 sm:p-8">
+            <div className="text-xs font-semibold tracking-[0.15em] uppercase text-slate-500 mb-3">
+              What I&apos;d do differently
+            </div>
+            <p className="text-slate-300 leading-relaxed">
+              We ran this with an awareness-grade launch and pipeline-grade
+              metrics, and nobody said that out loud on day one. If I&apos;d
+              declared the objective as pipeline at T-minus-16-weeks instead of
+              letting the metrics imply it later, funnel instrumentation would
+              have been critical path from the start rather than something I
+              backfilled after a quarter of great impressions and no pipeline.
+              The flat quarter was a planning failure before it was a messaging
+              one.
+            </p>
+          </div>
+
+          <ResourceLink
+            slug="launch-bom"
+            label="The BOM rebuilt the way it should have been scoped on day one"
+          />
         </CaseSection>
 
         {/* ── Why this work ───────────────────────── */}

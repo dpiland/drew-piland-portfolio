@@ -24,6 +24,7 @@ const DST_DIR = path.join(process.cwd(), "content", "work-samples");
 // source filename -> deployed filename. Must stay aligned with the `file`
 // values in data/workSamples.ts.
 const FILES = {
+  "cloudbees-unify-launch-bom.md": "launch-bom.md",
   "cloudbees-unify-positioning.md": "positioning.md",
   "cloudbees-unify-messaging-house.md": "messaging-house.md",
   "cloudbees-unify-command-message.md": "command-of-the-message.md",
