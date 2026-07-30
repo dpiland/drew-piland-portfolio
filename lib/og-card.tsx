@@ -4,12 +4,29 @@ export const ogSize = { width: 1200, height: 630 };
 export const ogContentType = "image/png";
 export const ogAlt = "Drew Piland, Product Marketing: I build for the rep, not the deck.";
 
+export interface OgCardOptions {
+  /** Two lines. The second renders in blue. */
+  headline?: [string, string];
+  /** Bottom-left label under the rule. */
+  footer?: string;
+}
+
+const DEFAULT_HEADLINE: [string, string] = ["I build for the rep,", "not the deck."];
+const DEFAULT_FOOTER = "Principal & Director Product Marketing";
+
 /**
- * Shared social card, rendered at build time and reused by both the
- * OpenGraph and Twitter image routes. Keeps LinkedIn, Slack, and X
- * previews identical.
+ * Shared social card, rendered at build time and reused by the site-wide
+ * OpenGraph and Twitter image routes. Keeps LinkedIn, Slack, and X previews
+ * identical.
+ *
+ * Called with no arguments it produces the site card. Sub-routes (case
+ * studies) pass their own headline so a shared link previews as that page
+ * rather than as the homepage.
  */
-export function renderOgCard() {
+export function renderOgCard({
+  headline = DEFAULT_HEADLINE,
+  footer = DEFAULT_FOOTER,
+}: OgCardOptions = {}) {
   return new ImageResponse(
     (
       <div
@@ -67,15 +84,16 @@ export function renderOgCard() {
           style={{
             display: "flex",
             flexDirection: "column",
-            fontSize: "78px",
+            // Longer case-study headlines need to step down to stay on two lines
+            fontSize: Math.max(...headline.map((l) => l.length)) > 22 ? "58px" : "78px",
             fontWeight: 700,
             lineHeight: 1.08,
             letterSpacing: "-0.02em",
             color: "#ffffff",
           }}
         >
-          <div style={{ display: "flex" }}>I build for the rep,</div>
-          <div style={{ display: "flex", color: "#60a5fa" }}>not the deck.</div>
+          <div style={{ display: "flex" }}>{headline[0]}</div>
+          <div style={{ display: "flex", color: "#60a5fa" }}>{headline[1]}</div>
         </div>
 
         {/* Footer row */}
@@ -89,7 +107,7 @@ export function renderOgCard() {
           }}
         >
           <div style={{ display: "flex", fontSize: "26px", color: "#94a3b8" }}>
-            Principal &amp; Director Product Marketing
+            {footer}
           </div>
           <div style={{ display: "flex", fontSize: "26px", color: "#475569" }}>
             drewpiland.com
