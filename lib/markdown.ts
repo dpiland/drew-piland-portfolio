@@ -11,6 +11,7 @@ const CROSS_LINKS: Record<string, string> = {
   "cloudbees-unify-messaging-house.md": "messaging-house",
   "cloudbees-unify-command-message.md": "command-of-the-message",
   "cloudbees-unify-analyst-submission.md": "analyst-submission",
+  "cloudbees-unify-sdlc-101-course.md": "sdlc-101",
 };
 
 /**

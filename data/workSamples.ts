@@ -48,6 +48,15 @@ export const workSamples: WorkSample[] = [
     readingTime: "12 min",
   },
   {
+    slug: "sdlc-101",
+    file: "sdlc-101.md",
+    title: "SDLC 101: The Course That Taught Reps the Lifecycle",
+    framework: "Seven-stage lifecycle map",
+    blurb:
+      "Every stage tagged against where CloudBees had an earned claim, an embrace claim, or no claim at all. Includes the deploy-versus-release mix-up every new rep walked in with, and the cake analogy they actually repeated back.",
+    readingTime: "14 min",
+  },
+  {
     slug: "analyst-submission",
     file: "analyst-submission.md",
     title: "Analyst Submissions: Positioning Cloud Native First",

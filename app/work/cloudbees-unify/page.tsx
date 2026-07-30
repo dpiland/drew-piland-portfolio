@@ -248,6 +248,20 @@ export default function CloudBeesUnifyCaseStudy() {
           <LifecycleStrip />
 
           <ResourceLink
+            slug="sdlc-101"
+            label="The full course, all seven stages, with the vendors and champions reps would meet at each"
+          />
+
+          <p>
+            The organizing rule was embrace, don&apos;t replace. Name the one
+            stage we genuinely owned, and everywhere else connect to what the
+            customer already ran instead of pitching a rip and replace. A rep
+            who can place a stated pain onto a stage knows in the same instant
+            whether we have an earned claim, an embrace claim, or no claim at
+            all.
+          </p>
+
+          <ResourceLink
             slug="command-of-the-message"
             label="The discovery-to-proof structure reps actually sold with"
           />
