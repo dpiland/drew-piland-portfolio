@@ -471,33 +471,6 @@ export default function CloudBeesUnifyCaseStudy() {
           </div>
         </section>
 
-        {/* ── Why this work ───────────────────────── */}
-        <section className="px-6 py-20 border-t border-slate-900">
-          <div className="max-w-4xl mx-auto">
-            <div className="rounded-2xl border border-blue-500/30 bg-blue-500/[0.06] p-7 sm:p-9">
-              <div className="text-xs font-semibold tracking-[0.2em] uppercase text-blue-400 mb-4">
-                Why this is the work I want more of
-              </div>
-              <div className="space-y-4 text-slate-300 leading-relaxed">
-                <p>
-                  Product marketing is the Rosetta Stone of the org. Engineering
-                  has one language, sales has another, and the buyer has a
-                  third. Standing in the middle and turning one into the other
-                  is the part of this job I actually like.
-                </p>
-                <p>
-                  The moment I chase is narrow and I know exactly what it sounds
-                  like: a rep I&apos;ve never coached uses my language on a call
-                  I&apos;m not on, and a customer answers in the same words. On
-                  this launch that took sixteen weeks of positioning work and
-                  then a year of keeping it alive. I&apos;d do it again
-                  tomorrow.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* ── Footer ──────────────────────────────── */}
         <section className="px-6 pb-24">
           <div className="max-w-4xl mx-auto">
