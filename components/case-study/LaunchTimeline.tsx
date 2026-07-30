@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { ArrowUpRight } from "lucide-react";
 import { timeline } from "@/data/unifyLaunch";
 
 /**
@@ -15,7 +16,7 @@ export function LaunchTimeline() {
       />
 
       <ol className="space-y-8">
-        {timeline.map(({ when, title, detail, emphasis, image }) => (
+        {timeline.map(({ when, title, detail, emphasis, image, link }) => (
           <li key={when + title} className="relative pl-10">
             {/* Node */}
             <span
@@ -37,6 +38,18 @@ export function LaunchTimeline() {
               {title}
             </div>
             <p className="text-slate-400 leading-relaxed max-w-2xl">{detail}</p>
+
+            {link && (
+              <a
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2 inline-flex items-center gap-1 text-sm text-blue-400 underline underline-offset-4 hover:text-blue-300"
+              >
+                {link.label}
+                <ArrowUpRight className="w-3.5 h-3.5" aria-hidden="true" />
+              </a>
+            )}
 
             {image && (
               <figure className="mt-5 max-w-2xl">

@@ -210,11 +210,6 @@ export const cadence: CadenceRow[] = [
     what: "Plays, positioning, and who we were up against",
   },
   {
-    who: "Top four reps",
-    when: "Every two weeks",
-    what: "Champion program. What is working in live deals, so it reaches the reps who never ask",
-  },
-  {
     who: "Whole field",
     when: "Weekly",
     what: "Market intel newsletter from a scraping agent, reviewed by me before it went out",
@@ -256,6 +251,7 @@ export interface TimelineStep {
   detail: string;
   emphasis?: boolean;
   image?: { src: string; alt: string; caption: string };
+  link?: { href: string; label: string };
 }
 
 export const timeline: TimelineStep[] = [
@@ -267,9 +263,9 @@ export const timeline: TimelineStep[] = [
   },
   {
     when: "Feb 2025",
-    title: "Control plane, named",
+    title: "CloudBees Unify, named",
     detail:
-      "We put the concept into market as the control plane before the term was in common use, so the category language was ours to define rather than answer.",
+      "We named it CloudBees Unify and put the control plane concept into market before the term was in common use, so the category language was ours to define rather than answer. Two analyst submissions, to Gartner and Forrester, anchored the new narrative.",
     emphasis: true,
   },
   {
@@ -291,13 +287,29 @@ export const timeline: TimelineStep[] = [
     },
   },
   {
-    when: "Q1 after launch",
+    when: "July 2025",
     title: "Great impressions, no pipeline",
     detail:
       "The campaign numbers looked strong enough to keep marketing happy, and none of it was converting to qualified pipeline. That is when I went back to win/loss.",
   },
   {
-    when: "Fiscal year end",
+    when: "August 2025",
+    title: "Re-anchored on control plane",
+    detail:
+      "Great impressions weren't converting, so we rebuilt the core differentiation around control plane, the category language we'd already seeded in February. Same window we set the PMF bar: 10 referenceable customers.",
+  },
+  {
+    when: "November 2025",
+    title: "Independent validation",
+    detail:
+      "We commissioned the DevOps Migration Index, an independent study on enterprise rip-and-replace failure, to back the control plane argument with data we didn't write ourselves.",
+    link: {
+      href: "https://www.cloudbees.com/blog/2025-devops-migration-index-rip-and-replace-failing-enterprises",
+      label: "Read the DevOps Migration Index",
+    },
+  },
+  {
+    when: "January 2026",
     title: "Proof, not announcement",
     detail:
       "The bar moved from launch to product-market fit: 10 referenceable customers. We closed at 13.",

@@ -312,12 +312,19 @@ export default function CloudBeesUnifyCaseStudy() {
           title="We marketed a unified platform while we were still launching individual products."
         >
           <p>
-            About a year on, that was the honest read. Externally the story was
+            Nine months in, that was the honest read. Externally the story was
             one platform. Internally we were still sequencing releases feature
             by feature, prioritized by engineering capacity, and that gap comes
             due the first time a customer asks the platform to behave like one.
             It changed how I organize launches, around customer outcomes rather
             than around whatever happens to be shipping.
+          </p>
+          <p>
+            That same nine-month mark is where we were still working out where
+            AI fit into the platform story, what we settled on calling the
+            context plane, parallel to the control plane language from launch.
+            Getting that timing right mattered: it&apos;s what carried into how
+            the messaging evolved for our SKO in February 2026.
           </p>
           <p>
             The smaller one I keep relearning is to validate with customers
@@ -410,6 +417,12 @@ export default function CloudBeesUnifyCaseStudy() {
                   </strong>{" "}
                   I&apos;d rather say that than imply one.
                 </p>
+                <div className="mt-4">
+                  <ResourceLink
+                    slug="progressive-delivery"
+                    label="The full reframe: three features into one platform bet"
+                  />
+                </div>
               </div>
             </div>
           </div>

@@ -78,6 +78,15 @@ export const workSamples: WorkSample[] = [
       "February 2025. Why we submitted on the product line that would become Unify instead of on our strongest legacy tooling, and what that cost us on paper to buy a truthful record before the May launch.",
     readingTime: "10 min",
   },
+  {
+    slug: "progressive-delivery",
+    file: "progressive-delivery.md",
+    title: "Progressive Delivery: Three Features, One Platform Bet",
+    framework: "Roadmap-to-platform reframe",
+    blurb:
+      "Three separately queued capabilities, reframed into one buyer outcome, with the launch trigger moved from GA to demoable to recover 90 days against competitors already embedded in deal cycles. I left before this phase reached GA, so there's no downstream number attached, only the bet and the reframe.",
+    readingTime: "4 min",
+  },
 ];
 
 export function getWorkSample(slug: string): WorkSample | undefined {

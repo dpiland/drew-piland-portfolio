@@ -29,9 +29,21 @@ const FILES = {
   "cloudbees-unify-messaging-house.md": "messaging-house.md",
   "cloudbees-unify-command-message.md": "command-of-the-message.md",
   "cloudbees-unify-analyst-submission.md": "analyst-submission.md",
+  "cloudbees-progressive-delivery-case-study.md": "progressive-delivery.md",
   // sdlc-101 is deliberately absent: that page is laid out as a visual course
   // from data/sdlc101.ts, not rendered from markdown. Edit the data file.
 };
+
+/**
+ * Source files carry an "INTERNAL NOTES" HTML comment block for authoring
+ * history (corrections, verification status, open questions). That's
+ * job-applications-repo material, not public copy, so it never reaches this
+ * repo's git history or the rendered page. Strips any HTML comment block,
+ * not just that one, in case a future source file adds its own.
+ */
+function stripInternalNotes(md) {
+  return md.replace(/<!--[\s\S]*?-->\n?/g, "").trimEnd() + "\n";
+}
 
 const checkOnly = process.argv.includes("--check");
 
@@ -56,7 +68,7 @@ for (const [src, dst] of Object.entries(FILES)) {
     continue;
   }
 
-  const incoming = fs.readFileSync(srcPath, "utf8");
+  const incoming = stripInternalNotes(fs.readFileSync(srcPath, "utf8"));
   const current = fs.existsSync(dstPath) ? fs.readFileSync(dstPath, "utf8") : null;
 
   if (current === incoming) {
