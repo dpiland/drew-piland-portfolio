@@ -250,7 +250,7 @@ export interface TimelineStep {
   title: string;
   detail: string;
   emphasis?: boolean;
-  image?: { src: string; alt: string; caption: string };
+  image?: { src: string; alt: string; caption?: string };
   link?: { href: string; label: string };
 }
 
@@ -282,8 +282,6 @@ export const timeline: TimelineStep[] = [
     image: {
       src: "/unify-nasdaq-launch.jpg",
       alt: "The CloudBees team in Times Square in front of the Nasdaq tower, which reads: The most open and flexible enterprise DevOps solution is here. Introducing CloudBees Unify.",
-      caption:
-        "Launch day in Times Square. The tower copy is the positioning compressed to nine words, which is the real test of whether it was ever tight enough.",
     },
   },
   {

@@ -63,9 +63,11 @@ export function LaunchTimeline() {
                     className="w-full h-auto"
                   />
                 </div>
-                <figcaption className="mt-2.5 text-sm text-slate-500 leading-relaxed">
-                  {image.caption}
-                </figcaption>
+                {image.caption && (
+                  <figcaption className="mt-2.5 text-sm text-slate-500 leading-relaxed">
+                    {image.caption}
+                  </figcaption>
+                )}
               </figure>
             )}
           </li>

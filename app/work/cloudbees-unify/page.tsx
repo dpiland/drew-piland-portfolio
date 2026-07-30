@@ -121,14 +121,6 @@ export default function CloudBeesUnifyCaseStudy() {
 
           <LaunchTimeline />
 
-          <p className="text-slate-300">
-            The date itself was set by a competitor, not a calendar.{" "}
-            <strong className="text-white font-semibold">
-              My bar for calling it launched: sales can tell the story and
-              customers will vouch for it.
-            </strong>
-          </p>
-
           <ResourceLink
             slug="launch-bom"
             label="The full Tier 1 bill of materials, with a RACI across nine functions"
@@ -161,9 +153,6 @@ export default function CloudBeesUnifyCaseStudy() {
                 className="w-full h-auto"
               />
             </div>
-            <figcaption className="mt-2.5 text-sm text-slate-500 leading-relaxed">
-              The reframe in one diagram: a control plane sitting above the tools you already run, not a replacement for them.
-            </figcaption>
           </figure>
 
           <ResourceLink
