@@ -67,7 +67,7 @@ export const workSamples: WorkSample[] = [
     framework: "Seven-stage lifecycle map",
     blurb:
       "Every stage tagged against where CloudBees had an earned claim, an embrace claim, or no claim at all. Includes the deploy-versus-release mix-up every new rep walked in with, and the cake analogy they actually repeated back.",
-    readingTime: "14 min",
+    readingTime: "5 min",
   },
   {
     slug: "analyst-submission",
