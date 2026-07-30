@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { timeline } from "@/data/unifyLaunch";
 
 /**
@@ -14,7 +15,7 @@ export function LaunchTimeline() {
       />
 
       <ol className="space-y-8">
-        {timeline.map(({ when, title, detail, emphasis }) => (
+        {timeline.map(({ when, title, detail, emphasis, image }) => (
           <li key={when + title} className="relative pl-10">
             {/* Node */}
             <span
@@ -36,6 +37,24 @@ export function LaunchTimeline() {
               {title}
             </div>
             <p className="text-slate-400 leading-relaxed max-w-2xl">{detail}</p>
+
+            {image && (
+              <figure className="mt-5 max-w-2xl">
+                <div className="relative rounded-xl overflow-hidden border border-slate-800">
+                  <Image
+                    src={image.src}
+                    alt={image.alt}
+                    width={1600}
+                    height={1067}
+                    sizes="(max-width: 768px) 100vw, 42rem"
+                    className="w-full h-auto"
+                  />
+                </div>
+                <figcaption className="mt-2.5 text-sm text-slate-500 leading-relaxed">
+                  {image.caption}
+                </figcaption>
+              </figure>
+            )}
           </li>
         ))}
       </ol>

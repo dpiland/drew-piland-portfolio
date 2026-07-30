@@ -11,6 +11,9 @@ import { RolePillars } from "@/components/case-study/RolePillars";
 import { PositioningDiagram } from "@/components/case-study/PositioningDiagram";
 import { Pitch } from "@/components/case-study/Pitch";
 import { PublishedAssets } from "@/components/case-study/PublishedAssets";
+import { ResourceLink } from "@/components/case-study/ResourceLink";
+import { KeyResources } from "@/components/case-study/KeyResources";
+import { MessageFlow } from "@/components/case-study/MessageFlow";
 import { CadenceGrid } from "@/components/case-study/CadenceGrid";
 import { LifecycleStrip } from "@/components/case-study/LifecycleStrip";
 import { FunnelDiagnostic } from "@/components/case-study/FunnelDiagnostic";
@@ -133,6 +136,11 @@ export default function CloudBeesUnifyCaseStudy() {
         >
           <PositioningDiagram />
 
+          <ResourceLink
+            slug="positioning"
+            label="The full positioning exercise, worked from competitive alternatives up"
+          />
+
           <p>
             We named it the control plane in February 2025, before the term was
             in common use. And it was a risk argument rather than a preference.
@@ -147,6 +155,11 @@ export default function CloudBeesUnifyCaseStudy() {
           </PullQuote>
 
           <Pitch />
+
+          <ResourceLink
+            slug="messaging-house"
+            label="The pillar structure underneath it, with the unproven claims marked as unproven"
+          />
 
           <div className="pt-2">
             <div className="text-xs font-semibold tracking-[0.15em] uppercase text-blue-400 mb-3">
@@ -183,6 +196,11 @@ export default function CloudBeesUnifyCaseStudy() {
             </div>
           </div>
 
+          <ResourceLink
+            slug="analyst-submission"
+            label="Why we submitted on the product line that would become Unify, not on our strongest tooling"
+          />
+
           <div className="rounded-2xl border border-slate-800 bg-slate-900/40 p-6">
             <div className="text-xs font-semibold tracking-[0.15em] uppercase text-blue-400 mb-2.5">
               Why this didn&apos;t read as a rebrand
@@ -201,8 +219,22 @@ export default function CloudBeesUnifyCaseStudy() {
         <CaseSection
           id="coordination"
           label="04 / Coordination"
-          title="A message dies in the six weeks after launch unless something keeps it alive."
+          title="PMM owned the source. Every channel downstream inherited it."
         >
+          <p>
+            I didn&apos;t hand marketing a positioning doc and hope. Positioning
+            and messaging sat with PMM, and the press release, the blogs, the
+            webinar series, the campaigns, and the sales plays were all built
+            off it rather than each writing their own version.
+          </p>
+
+          <MessageFlow />
+
+          <p>
+            Then the internal half, which is the part that decides whether a
+            message survives past launch week.
+          </p>
+
           <CadenceGrid />
 
           <p>
@@ -214,6 +246,11 @@ export default function CloudBeesUnifyCaseStudy() {
           </p>
 
           <LifecycleStrip />
+
+          <ResourceLink
+            slug="command-of-the-message"
+            label="The discovery-to-proof structure reps actually sold with"
+          />
 
           <div className="rounded-2xl border border-amber-500/30 bg-amber-500/[0.05] p-6 sm:p-7">
             <div className="text-xs font-semibold tracking-[0.15em] uppercase text-amber-400 mb-3">
@@ -335,6 +372,22 @@ export default function CloudBeesUnifyCaseStudy() {
                 </p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* ── Key resources ───────────────────────── */}
+        <section
+          id="resources"
+          className="px-6 py-20 border-t border-slate-900 scroll-mt-16"
+        >
+          <div className="max-w-4xl mx-auto">
+            <div className="text-xs font-semibold tracking-[0.2em] uppercase text-blue-400 mb-4">
+              Key resources
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-semibold text-white leading-tight mb-10 max-w-3xl">
+              Everything referenced above, in full.
+            </h2>
+            <KeyResources />
           </div>
         </section>
 

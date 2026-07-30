@@ -64,6 +64,94 @@ body {
   background-clip: text;
 }
 
+/* ─── Long-form markdown (work samples) ──────── */
+/* Hand-rolled instead of @tailwindcss/typography: one dep fewer, and the
+   dark palette here is narrower than the plugin's defaults. */
+.prose-doc {
+  color: #94a3b8;
+  line-height: 1.75;
+}
+.prose-doc > * + * { margin-top: 1.25rem; }
+
+.prose-doc h2 {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #1e293b;
+}
+.prose-doc h3 {
+  color: #ffffff;
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-top: 2rem;
+}
+.prose-doc h4 {
+  color: #cbd5e1;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+}
+.prose-doc strong { color: #e2e8f0; font-weight: 600; }
+.prose-doc em { color: #cbd5e1; }
+
+.prose-doc a {
+  color: #60a5fa;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(96, 165, 250, 0.4);
+}
+.prose-doc a:hover { color: #93c5fd; text-decoration-color: #93c5fd; }
+
+.prose-doc ul, .prose-doc ol { padding-left: 1.5rem; }
+.prose-doc ul { list-style: disc; }
+.prose-doc ol { list-style: decimal; }
+.prose-doc li { margin-top: 0.5rem; }
+.prose-doc li::marker { color: #475569; }
+
+.prose-doc blockquote {
+  border-left: 2px solid #3b82f6;
+  padding: 0.25rem 0 0.25rem 1.5rem;
+  color: #cbd5e1;
+}
+.prose-doc blockquote p + p { margin-top: 0.75rem; }
+
+.prose-doc hr { border: 0; border-top: 1px solid #1e293b; margin: 2.5rem 0; }
+
+.prose-doc code {
+  background: #1e293b;
+  color: #e2e8f0;
+  padding: 0.125rem 0.375rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+}
+.prose-doc pre {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  overflow-x: auto;
+}
+.prose-doc pre code { background: none; padding: 0; }
+
+/* Tables scroll inside their own box so the page never scrolls sideways */
+.prose-doc table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+}
+.prose-doc th, .prose-doc td {
+  border: 1px solid #1e293b;
+  padding: 0.625rem 0.875rem;
+  text-align: left;
+  vertical-align: top;
+}
+.prose-doc th { color: #ffffff; font-weight: 600; background: rgba(30, 41, 59, 0.4); }
+
 /* ─── Card hover effect ──────────────────────── */
 .card-hover {
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;

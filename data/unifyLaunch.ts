@@ -46,6 +46,7 @@ export const storyArc = [
   { id: "positioning", label: "Positioning" },
   { id: "coordination", label: "Coordination" },
   { id: "learnings", label: "Learnings" },
+  { id: "resources", label: "Resources" },
 ];
 
 export interface SuccessMetric {
@@ -176,6 +177,20 @@ export const validation: Validation[] = [
   },
 ];
 
+/**
+ * The operating model: PMM owned positioning and messaging, and every
+ * downstream channel inherited it rather than writing its own version.
+ */
+export const downstreamChannels = [
+  "Press release",
+  "Launch moment (Nasdaq, Times Square)",
+  "Blogs and thought leadership",
+  "Webinar series",
+  "Campaigns and outreach",
+  "Analyst briefings",
+  "Sales plays and enablement",
+];
+
 export interface CadenceRow {
   who: string;
   when: string;
@@ -240,6 +255,7 @@ export interface TimelineStep {
   title: string;
   detail: string;
   emphasis?: boolean;
+  image?: { src: string; alt: string; caption: string };
 }
 
 export const timeline: TimelineStep[] = [
@@ -267,6 +283,12 @@ export const timeline: TimelineStep[] = [
     title: "Unify launches",
     detail: "On the date we set in February.",
     emphasis: true,
+    image: {
+      src: "/unify-nasdaq-launch.jpg",
+      alt: "The CloudBees team in Times Square in front of the Nasdaq tower, which reads: The most open and flexible enterprise DevOps solution is here. Introducing CloudBees Unify.",
+      caption:
+        "Launch day in Times Square. The tower copy is the positioning compressed to nine words, which is the real test of whether it was ever tight enough.",
+    },
   },
   {
     when: "Q1 after launch",
