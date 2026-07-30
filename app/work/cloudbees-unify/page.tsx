@@ -216,10 +216,12 @@ export default function CloudBeesUnifyCaseStudy() {
             <p className="text-slate-400 leading-relaxed mb-5">
               Both of these carry our CPO&apos;s byline and I informed the
               narrative behind them. They&apos;re a pair on purpose. The first
-              is the launch manifesto written for the architect. The second is{" "}
+              is the launch manifesto written for the architect, our champion.
+              The second is{" "}
               <strong className="text-white font-semibold">
                 what I rebuilt five months later, once win/loss showed the
-                message wasn&apos;t reaching the people who sign.
+                champion&apos;s message wasn&apos;t reaching the people who
+                sign.
               </strong>
             </p>
             <PublishedAssets />
@@ -290,19 +292,22 @@ export default function CloudBeesUnifyCaseStudy() {
               What went wrong
             </div>
             <p className="text-slate-300 leading-relaxed mb-4">
-              The impression data was excellent. Marketing was happy with it.
-              None of it was converting to qualified pipeline, and{" "}
+              The impression data was excellent, and marketing was happy with
+              it. None of it was converting to qualified pipeline, and{" "}
               <strong className="text-white font-semibold">
                 a quarter of good-looking campaign numbers is exactly how a
                 launch dies quietly.
               </strong>{" "}
-              Win/loss told me why: the message was landing with architects,
-              not the VPs who sign. So I rebuilt the executive materials around
-              business outcomes, then fixed the distribution underneath with
-              dedicated sales plays, rep training, and Gong scoring on whether
-              the message was actually being said in deals. A better message
-              that never gets spoken is worth nothing. The October piece linked
-              in section 03 is what that rebuild produced.
+              Win/loss told me why: we had champions, not a line to the VPs who
+              sign, an access problem as much as a perception one.{" "}
+              <strong className="text-white font-semibold">
+                The control-plane reframe existed to close exactly that
+                buying-center gap.
+              </strong>{" "}
+              So I rebuilt the executive materials around business outcomes and
+              armed reps with sales plays, training, and Gong scoring to prove
+              the message was actually landing. A better message that never
+              gets spoken is worth nothing.
             </p>
             <p className="text-slate-400 leading-relaxed text-sm">
               That scoring caught something I didn&apos;t plan for, too.{" "}
