@@ -1,3 +1,5 @@
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
 import type { CaseStudy } from "@/data/caseStudies";
 
 interface CaseStudyCardProps {
@@ -55,6 +57,19 @@ export function CaseStudyCard({ study }: CaseStudyCardProps) {
           </span>
         ))}
       </div>
+
+      {study.href && (
+        <Link
+          href={study.href}
+          className="group/link flex items-center gap-1.5 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
+        >
+          Read the full case study
+          <ArrowRight
+            className="w-4 h-4 transition-transform group-hover/link:translate-x-0.5"
+            aria-hidden="true"
+          />
+        </Link>
+      )}
     </div>
   );
 }

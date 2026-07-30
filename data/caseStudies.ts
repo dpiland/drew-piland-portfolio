@@ -9,6 +9,8 @@ export interface CaseStudy {
   // EDIT: Replace [Placeholder: ...] markers with your real metrics
   impact: string;
   tags: string[];
+  /** Path to a full case study page, if one exists. */
+  href?: string;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -26,6 +28,7 @@ export const caseStudies: CaseStudy[] = [
     impact:
       "Drove +26% ARR on a $45M product line by reframing the story from Jenkins connector to enterprise release control plane, and aligned the CEO, CMO, and co-founders on the identity shift.",
     tags: ["Positioning", "Launch", "DevOps", "B2B SaaS"],
+    href: "/work/cloudbees-unify",
   },
   {
     id: "analyst",
