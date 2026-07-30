@@ -2,9 +2,13 @@
  * Long-form work samples behind the CloudBees Unify case study.
  *
  * Source of truth for the prose is ~/Projects/job-applications/Career/
- * work-samples/cloudbees-unify-*.md. The copies in content/work-samples/
- * are what actually deploy, since Vercel only builds this repo. Re-copy on
- * edit; there is no sync automation.
+ * work-samples/cloudbees-unify-*.md. The copies in content/work-samples/ are
+ * what actually deploy, because Vercel only checks out this repo.
+ *
+ * Editing a source file does NOT update the site. Run `npm run sync-samples`
+ * and commit content/work-samples/. `npm run check-samples` reports drift
+ * without writing. The filename map lives in scripts/sync-work-samples.mjs
+ * and must stay aligned with the `file` values below.
  */
 
 export interface WorkSample {

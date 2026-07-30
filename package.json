@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sync-samples": "node scripts/sync-work-samples.mjs",
+    "check-samples": "node scripts/sync-work-samples.mjs --check"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",
