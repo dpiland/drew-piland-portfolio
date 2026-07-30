@@ -3,7 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { CaseHeader } from "@/components/case-study/CaseHeader";
-import { SdlcMap } from "@/components/case-study/SdlcMap";
+import { SdlcCourse } from "@/components/case-study/SdlcCourse";
 import { workSamples, getWorkSample } from "@/data/workSamples";
 import { renderWorkSample } from "@/lib/markdown";
 
@@ -44,7 +44,10 @@ export default async function WorkSamplePage({ params }: Props) {
   const sample = getWorkSample(resource);
   if (!sample) notFound();
 
-  const html = renderWorkSample(sample.file);
+  // SDLC 101 is laid out as a visual course rather than rendered prose; the
+  // map and stage cards already carry what the markdown body said.
+  const custom = sample.slug === "sdlc-101";
+  const html = custom ? null : renderWorkSample(sample.file);
   const others = workSamples.filter((s) => s.slug !== sample.slug);
 
   return (
@@ -68,13 +71,14 @@ export default async function WorkSamplePage({ params }: Props) {
             {sample.title}
           </h1>
 
-          {/* The map goes above the prose: see the shape, then read the detail */}
-          {sample.slug === "sdlc-101" && <SdlcMap />}
-
-          <div
-            className="prose-doc"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          {custom ? (
+            <SdlcCourse />
+          ) : (
+            <div
+              className="prose-doc"
+              dangerouslySetInnerHTML={{ __html: html! }}
+            />
+          )}
 
           {/* Sibling samples */}
           <div className="mt-16 pt-10 border-t border-slate-800">

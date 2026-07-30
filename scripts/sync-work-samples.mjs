@@ -27,8 +27,9 @@ const FILES = {
   "cloudbees-unify-positioning.md": "positioning.md",
   "cloudbees-unify-messaging-house.md": "messaging-house.md",
   "cloudbees-unify-command-message.md": "command-of-the-message.md",
-  "cloudbees-unify-sdlc-101-course.md": "sdlc-101.md",
   "cloudbees-unify-analyst-submission.md": "analyst-submission.md",
+  // sdlc-101 is deliberately absent: that page is laid out as a visual course
+  // from data/sdlc101.ts, not rendered from markdown. Edit the data file.
 };
 
 const checkOnly = process.argv.includes("--check");

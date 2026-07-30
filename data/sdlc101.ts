@@ -1,10 +1,15 @@
 /**
- * The seven-stage map from the SDLC 101 course. Source of truth is
- * content/work-samples/sdlc-101.md; this is the same content structured for
- * the visual at the top of that page.
+ * The SDLC 101 course. THIS FILE IS THE SOURCE OF TRUTH for the page at
+ * /work/cloudbees-unify/sdlc-101, which is laid out as a visual course rather
+ * than rendered from markdown, so the reader is not walked through seven
+ * stages twice.
  *
- * Zones mirror data/unifyLaunch.ts lifecycle so the strip and the cards can
- * never disagree.
+ * The original prose lives at job-applications/Career/work-samples/
+ * cloudbees-unify-sdlc-101-course.md and is NOT synced or deployed. Editing it
+ * changes nothing on the site; edit here instead.
+ *
+ * Zones mirror data/unifyLaunch.ts lifecycle so the case-study strip and these
+ * cards can never disagree.
  */
 
 export type Zone = "outside" | "heritage" | "expansion";
@@ -27,10 +32,67 @@ export const zoneLabels: Record<Zone, string> = {
 };
 
 export const zoneMeaning: Record<Zone, string> = {
-  outside: "Never our territory. Connect to it, never pitch replacing it.",
-  heritage: "The one stage CloudBees owned outright.",
-  expansion: "Where Unify let us compete, by coordinating tools already in place.",
+  outside:
+    "Never our territory. Embraced by connecting to it (a planning tool, a repo), never pitched as something to replace.",
+  heritage:
+    "The one stage CloudBees actually excelled at and owned outright.",
+  expansion:
+    "The stages Unify let us compete for, by embracing the tools a customer already runs and coordinating them as one governed system, rather than asking anyone to migrate off them.",
 };
+
+/** The deploy/release mix-up every new rep walked in with. */
+export const misconception = {
+  heading: "The misconception every new rep walked in with",
+  claim: "Deploy is an action. Release is a decision.",
+  body: [
+    "Reps used the two as synonyms. They aren't, and the difference is the whole reason CloudBees treats them as separate stages. Deploy is the mechanical fact of an artifact moving into an environment, up to and including production. Release is the governed call that whatever just moved is actually available to customers.",
+    "The two routinely happen apart. Code can be deployed to production behind a feature flag, sitting there dark, fully shipped and not released to a single user. A release can happen with no new deploy at all, flipping a flag on code that has been in production for a week.",
+    "A rep who collapses them will describe a customer's dark-launch practice as broken (\"you deployed it but it's not live?\") when it's a deliberate, mature pattern they built on purpose. Naming the distinction correctly is often the fastest way a rep earns credibility with a platform engineering audience in the first five minutes.",
+  ],
+};
+
+export interface CakeStep {
+  stage: string;
+  text: string;
+}
+
+/**
+ * The closing analogy. The seven-stage map is accurate; this is what a rep
+ * actually repeats back to a customer at 4pm on a Friday.
+ */
+export const cake: CakeStep[] = [
+  {
+    stage: "Plan",
+    text: "Deciding what cake to bake and pulling the recipe. That decision belongs to whoever is planning the event, not to whoever eventually bakes it.",
+  },
+  {
+    stage: "Code",
+    text: "Measuring the ingredients and mixing the batter. CloudBees doesn't sell flour, and it doesn't sell mixing bowls either.",
+  },
+  {
+    stage: "Build",
+    text: "Putting the batter in the oven. The stage CloudBees has always owned: the oven everyone already trusts to turn batter into a cake, the same way every time.",
+  },
+  {
+    stage: "Test",
+    text: "The toothpick test. Checking that what came out of the oven is actually done before anyone commits to serving it.",
+  },
+  {
+    stage: "Release",
+    text: "The decision that the cake is frosted, inspected, and cleared to leave the kitchen. A decision, not an action.",
+  },
+  {
+    stage: "Deploy",
+    text: "Carrying the cake out and setting it on the table. The action, not the decision. A cake can sit under a cover, deployed but not released, same as a feature flag.",
+  },
+  {
+    stage: "Govern",
+    text: "The recipe card that travels with the cake, so when someone asks what is actually in it later, an allergy question, an auditor, there's a written answer instead of a reconstruction.",
+  },
+];
+
+export const cakePunchline =
+  "CloudBees was never trying to be the cookbook or sell the flour, and it wasn't asking anyone to buy a new oven. Theirs already works. What Unify added was everything after the oven: knowing the cake is done, deciding it's ready, getting it to the table, and keeping the card that says what's in it.";
 
 export const sdlcStages: SdlcStage[] = [
   {
