@@ -3,6 +3,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { CaseHeader } from "@/components/case-study/CaseHeader";
+import { SdlcMap } from "@/components/case-study/SdlcMap";
 import { workSamples, getWorkSample } from "@/data/workSamples";
 import { renderWorkSample } from "@/lib/markdown";
 
@@ -66,6 +67,9 @@ export default async function WorkSamplePage({ params }: Props) {
           <h1 className="text-3xl sm:text-4xl font-semibold text-white leading-tight tracking-tight mb-10">
             {sample.title}
           </h1>
+
+          {/* The map goes above the prose: see the shape, then read the detail */}
+          {sample.slug === "sdlc-101" && <SdlcMap />}
 
           <div
             className="prose-doc"
