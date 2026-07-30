@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { CaseHeader } from "@/components/case-study/CaseHeader";
 import { CaseSection } from "@/components/case-study/CaseSection";
@@ -140,6 +141,22 @@ export default function CloudBeesUnifyCaseStudy() {
           title="The market's answer to tool sprawl was consolidation. I bet against it."
         >
           <PositioningDiagram />
+
+          <figure className="my-10 max-w-2xl">
+            <div className="relative rounded-xl overflow-hidden border border-slate-800">
+              <Image
+                src="/unify-architecture-diagram.png"
+                alt="CloudBees Unify architecture: fragmented Source, Plan, Build, Test, Secure, Package, Release, and Operate signals feeding a Control & Context Plane (Governance & Policy, Agentic DevOps Orchestration, Security & Compliance, Multi-Tool Data & SDLC Context Model), which drives the Unify Build, Test, Deploy, and Secure pillars."
+                width={1254}
+                height={1166}
+                sizes="(max-width: 768px) 100vw, 42rem"
+                className="w-full h-auto"
+              />
+            </div>
+            <figcaption className="mt-2.5 text-sm text-slate-500 leading-relaxed">
+              The reframe in one diagram: a control plane sitting above the tools you already run, not a replacement for them.
+            </figcaption>
+          </figure>
 
           <ResourceLink
             slug="positioning"
