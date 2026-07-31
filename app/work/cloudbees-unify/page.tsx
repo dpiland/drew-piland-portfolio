@@ -351,6 +351,16 @@ export default function CloudBeesUnifyCaseStudy() {
                 messaging one.
               </strong>
             </p>
+            <p className="text-slate-300 leading-relaxed mt-4">
+              The other: we commissioned the DevOps Migration Index in
+              November, five months after launch. Run that same study
+              pre-launch instead, and{" "}
+              <strong className="text-white font-semibold">
+                we&apos;d have had independent ROI signal to validate the
+                control-plane messaging before we bet the reposition on it,
+                not after.
+              </strong>
+            </p>
           </div>
 
           <ResourceLink
