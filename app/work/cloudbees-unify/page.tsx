@@ -110,13 +110,12 @@ export default function CloudBeesUnifyCaseStudy() {
             Most launches this size get hung on a conference date. Ours
             couldn&apos;t. CloudBees had been the only real option in its
             category for a decade, so our reps had never had to sell
-            competitively, and{" "}
+            competitively.{" "}
             <strong className="text-white font-semibold">
-              that (not awareness) was the binding constraint
-            </strong>
-            . The anchor became an internal moment: a mini sales kickoff where the
-            field got the new story in person, with the public launch
-            deliberately sequenced after it.
+              That, not awareness, was the real problem.
+            </strong>{" "}
+            The anchor became internal instead: a mini sales kickoff to get
+            the field the new story in person, before any of it went public.
           </p>
 
           <LaunchTimeline />
@@ -278,12 +277,12 @@ export default function CloudBeesUnifyCaseStudy() {
             <div className="text-xs font-semibold tracking-[0.15em] uppercase text-amber-400 mb-3">
               What went wrong
             </div>
-            <p className="text-slate-300 leading-relaxed mb-4">
-              The impression data was excellent, and marketing was happy with
-              it. None of it was converting to qualified pipeline, and{" "}
+            <p className="text-slate-300 leading-relaxed">
+              The impression data was excellent. None of it converted to
+              qualified pipeline.{" "}
               <strong className="text-white font-semibold">
-                a quarter of good-looking campaign numbers is exactly how a
-                launch dies quietly.
+                A quarter of good-looking numbers is exactly how a launch
+                dies quietly.
               </strong>{" "}
               Win/loss told me why: we had champions, not a line to the VPs who
               sign, an access problem as much as a perception one.{" "}
@@ -291,17 +290,9 @@ export default function CloudBeesUnifyCaseStudy() {
                 The control-plane reframe existed to close exactly that
                 buying-center gap.
               </strong>{" "}
-              So I rebuilt the executive materials around business outcomes and
-              armed reps with sales plays, training, and Gong scoring to prove
-              the message was actually landing. A better message that never
-              gets spoken is worth nothing.
-            </p>
-            <p className="text-slate-400 leading-relaxed text-sm">
-              That scoring caught something I didn&apos;t plan for, too.{" "}
-              <strong className="text-white font-semibold">
-                Some pitches that read as well-prepared turned out to be reps
-                reading generated text back to a customer.
-              </strong>
+              I rebuilt the executive materials around business outcomes,
+              armed reps with sales plays and training, and used Gong scoring
+              to prove the message was actually landing.
             </p>
           </div>
 
@@ -340,10 +331,8 @@ export default function CloudBeesUnifyCaseStudy() {
             <strong className="text-white font-semibold">
               a launch is a program, not a moment.
             </strong>{" "}
-            May 2025 was the start of it, not the end: the October rebuild,
-            the November validation study, and the January proof point all
-            fed off the position we staked there. Nearly all of the learning
-            happened in the first 90 days.
+            May 2025 started it, and proving it out took the rest of the
+            year. Nearly all of the learning happened in the first 90 days.
           </p>
 
           <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-6 sm:p-8">
