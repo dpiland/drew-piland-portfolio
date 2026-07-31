@@ -262,9 +262,9 @@ export const timeline: TimelineStep[] = [
   },
   {
     when: "July 2025",
-    title: "Great impressions, no pipeline",
+    title: "Great impressions, pipeline was stalling",
     detail:
-      "The campaign numbers looked strong enough to keep marketing happy, and none of it was converting to qualified pipeline. That is when I went back to win/loss.",
+      "TOFU metrics were lighting up, but deals were stalling at Sales Stage 2. We had a qualification problem, not an awareness problem. That is when I went back to win/loss.",
   },
   {
     when: "August 2025",
