@@ -18,7 +18,7 @@ import { MessageFlow } from "@/components/case-study/MessageFlow";
 import { CadenceGrid } from "@/components/case-study/CadenceGrid";
 import { LifecycleStrip } from "@/components/case-study/LifecycleStrip";
 import { FunnelDiagnostic } from "@/components/case-study/FunnelDiagnostic";
-import { heroMetrics, validation } from "@/data/unifyLaunch";
+import { heroMetrics } from "@/data/unifyLaunch";
 
 const TITLE = "CloudBees Unify: an end-to-end GTM launch | Drew Piland";
 const DESCRIPTION =
@@ -208,9 +208,7 @@ export default function CloudBeesUnifyCaseStudy() {
               is the launch manifesto written for the architect, our champion.
               The second is{" "}
               <strong className="text-white font-semibold">
-                what I rebuilt five months later, once win/loss showed the
-                champion&apos;s message wasn&apos;t reaching the people who
-                sign.
+                the executive rebuild, five months later.
               </strong>
             </p>
             <PublishedAssets />
@@ -342,8 +340,10 @@ export default function CloudBeesUnifyCaseStudy() {
             <strong className="text-white font-semibold">
               a launch is a program, not a moment.
             </strong>{" "}
-            Nearly all of the learning is in the first 90 days after the
-            announcement.
+            May 2025 was the start of it, not the end: the October rebuild,
+            the November validation study, and the January proof point all
+            fed off the position we staked there. Nearly all of the learning
+            happened in the first 90 days.
           </p>
 
           <div className="rounded-2xl border border-slate-700 bg-slate-900/80 p-6 sm:p-8">
@@ -355,8 +355,8 @@ export default function CloudBeesUnifyCaseStudy() {
               metrics, and nobody said that out loud on day one. If I&apos;d
               declared the objective as pipeline at T-minus-16-weeks instead of
               letting the metrics imply it later, funnel instrumentation would
-              have been critical path from the start rather than something I
-              backfilled after a quarter of great impressions and no pipeline.{" "}
+              have been critical path from the start instead of something I
+              backfilled a quarter in.{" "}
               <strong className="text-white font-semibold">
                 The flat quarter was a planning failure before it was a
                 messaging one.
@@ -375,33 +375,6 @@ export default function CloudBeesUnifyCaseStudy() {
           <div className="max-w-4xl mx-auto">
             <div className="text-xs font-semibold tracking-[0.2em] uppercase text-slate-600 mb-6">
               Appendix / Context, if it comes up
-            </div>
-
-            <div className="mb-10">
-              <div className="text-xs font-semibold tracking-[0.15em] uppercase text-blue-400 mb-4">
-                How I knew it worked before we launched
-              </div>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {validation.map(({ method, detail }) => (
-                  <div
-                    key={method}
-                    className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5"
-                  >
-                    <div className="text-sm font-semibold text-white mb-1.5">
-                      {method}
-                    </div>
-                    <div className="text-sm text-slate-400 leading-relaxed">
-                      {detail}
-                    </div>
-                  </div>
-                ))}
-              </div>
-              <div className="mt-4">
-                <ResourceLink
-                  slug="analyst-submission"
-                  label="Why we submitted on the product line that would become Unify, not on our strongest tooling"
-                />
-              </div>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

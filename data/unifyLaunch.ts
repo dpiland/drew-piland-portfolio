@@ -153,30 +153,6 @@ export const publishedAssets: PublishedAsset[] = [
   },
 ];
 
-export interface Validation {
-  method: string;
-  detail: string;
-}
-
-/** Run before committing to the narrative, on a clock that fit the launch. */
-export const validation: Validation[] = [
-  {
-    method: "Wynter message testing",
-    detail:
-      "Pressure-tested the positioning against the real buyer before we committed to it.",
-  },
-  {
-    method: "Analyst briefings",
-    detail:
-      "Sanity-checked the narrative against what Gartner and Forrester were already hearing. I prepped our VP of PMM to lead them.",
-  },
-  {
-    method: "A motion we had already run",
-    detail:
-      "The Jenkins-to-platform reframe had worked once before, on a smaller line, so we knew it was repeatable.",
-  },
-];
-
 /**
  * The operating model: PMM owned positioning and messaging, and every
  * downstream channel inherited it rather than writing its own version.
@@ -265,7 +241,7 @@ export const timeline: TimelineStep[] = [
     when: "Feb 2025",
     title: "CloudBees Unify, named",
     detail:
-      "We named it CloudBees Unify and put the control plane concept into market before the term was in common use, so the category language was ours to define rather than answer. Two analyst submissions, to Gartner and Forrester, anchored the new narrative.",
+      "We named it CloudBees Unify and staked the control plane category claim, so the language was ours to define rather than answer. Two analyst submissions, to Gartner and Forrester, anchored the new narrative.",
     emphasis: true,
   },
   {
@@ -294,7 +270,7 @@ export const timeline: TimelineStep[] = [
     when: "August 2025",
     title: "Re-anchored on control plane",
     detail:
-      "Great impressions weren't converting, so we rebuilt the core differentiation around control plane, the category language we'd already seeded in February. Same window we set the PMF bar: 10 referenceable customers.",
+      "Rebuilt the core differentiation around control plane, the category language we'd already seeded in February. Same window we set the PMF bar.",
   },
   {
     when: "November 2025",
@@ -347,39 +323,6 @@ export const positioning: PositioningColumn[] = [
     outcome:
       "Governance starts now, across what is already running, and the organization keeps the right to change its mind about tools later.",
     tone: "accent",
-  },
-];
-
-export interface Workstream {
-  title: string;
-  detail: string;
-}
-
-export const workstreams: Workstream[] = [
-  {
-    title: "Narrative",
-    detail:
-      "Owned the portfolio-level story, built on the release orchestration arc I had been developing for years.",
-  },
-  {
-    title: "Analyst strategy",
-    detail:
-      "Led the Gartner Magic Quadrant and Forrester Wave submissions, and prepped our VP of PMM to lead the briefings.",
-  },
-  {
-    title: "Enablement",
-    detail:
-      "Mini sales kickoff, the SDLC 101 course, dedicated sales plays, and a champion program with the top four reps.",
-  },
-  {
-    title: "Customer validation",
-    detail:
-      "Wynter message testing before we committed, then converting adopting accounts into named references.",
-  },
-  {
-    title: "Public launch",
-    detail:
-      "Fed the finished messaging into the demand and campaign motion, last rather than first.",
   },
 ];
 
